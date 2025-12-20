@@ -20,6 +20,7 @@ public class BaseTurretScript : MonoBehaviour
     [SerializeField] float targetingRange = 5f;
     [SerializeField] float RotationSpeed = 5f;
     [SerializeField] float bps = 0.8f; //bullets per second
+    [SerializeField] float timeBeforeAnimation = 0.3f;
 
     private Transform target;
     private float TimeUntilFire;
@@ -50,6 +51,11 @@ public class BaseTurretScript : MonoBehaviour
     }
 
     private void Shoot()
+    {
+        animator.SetTrigger("Attack");
+        Invoke("Shoot2", timeBeforeAnimation);
+    }
+    private void Shoot2()
     {
         GameObject bulletOBJ = Instantiate(BulletPrefab, FiringPoint.position, Quaternion.identity);
         BulletScript bulletscript = bulletOBJ.GetComponent<BulletScript>();
@@ -87,11 +93,13 @@ public class BaseTurretScript : MonoBehaviour
             {
                 CurrentSprite.sprite = SideAttack;
                 ObjectToRotate.rotation = Quaternion.Euler(0, 180, 0);
+                animator.SetInteger("Direction", 0);
             }
             else //lewo
             {
                 CurrentSprite.sprite = SideAttack;
                 ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
+                animator.SetInteger("Direction", 0);
             }
         }
         else
@@ -100,13 +108,20 @@ public class BaseTurretScript : MonoBehaviour
             {
                 CurrentSprite.sprite = UpAttack;
                 ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
+                animator.SetInteger("Direction", 2);
             }
             else
             {
                 CurrentSprite.sprite = DownAttack;
                 ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
+                animator.SetInteger("Direction", 1);
             }
         }
+    }
+    Animator animator;
+    private void Awake()
+    {
+         animator = GetComponentInChildren<Animator>();   
     }
     //private void RotateTowardsTarget() //je¿eli jednostka jest jednostk¹ która ma krêciæ g³ow¹
     //{
