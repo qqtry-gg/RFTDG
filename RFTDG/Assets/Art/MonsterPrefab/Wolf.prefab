@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 4039901463788289763}
   - component: {fileID: 5008809135540701833}
   - component: {fileID: 1799265903136321964}
-  m_Layer: 0
-  m_Name: Goblin
+  - component: {fileID: 4574904713601901565}
+  m_Layer: 6
+  m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.16653156, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.20754719, g: 0.2026522, b: 0.2026522, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,7 +104,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 335594504579162428}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -118,7 +119,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &5008809135540701833
 CircleCollider2D:
@@ -168,5 +169,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 2
+  movespeed: 4
   rb: {fileID: 4039901463788289763}
+--- !u!114 &4574904713601901565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e2de702d6c68249935f5dec558a719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  hitpoints: 5
