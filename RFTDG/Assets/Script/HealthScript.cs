@@ -37,7 +37,7 @@ public class HealthScript : MonoBehaviour
         if (!is_PoisonWorking)
         {
             is_PoisonWorking = true;
-            for (int i = 3; PoisonHitCounter <= i;)
+            for (int i = 4; PoisonHitCounter <= i;)
             {
                 yield return new WaitForSeconds(PoisonCooldownBeforeDMG);
                 PoisonHitCounter++;

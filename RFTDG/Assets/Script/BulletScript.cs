@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
@@ -21,6 +22,7 @@ public class BulletScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        StartCoroutine(DestroyObjectAfterTime(5));
         if (!Target) return;
         Vector2 direction = (Target.position - transform.position).normalized;
 
@@ -34,6 +36,11 @@ public class BulletScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.transform.gameObject.GetComponent<HealthScript>().TakeDamage(dmg);
+        Destroy(gameObject);
+    }
+    IEnumerator DestroyObjectAfterTime(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         Destroy(gameObject);
     }
 }

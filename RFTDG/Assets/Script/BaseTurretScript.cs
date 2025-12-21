@@ -21,7 +21,8 @@ public class BaseTurretScript : MonoBehaviour
     [SerializeField] float RotationSpeed = 5f;
     [SerializeField] float bps = 0.8f; //bullets per second
     [SerializeField] float timeBeforeAnimation = 0.3f;
-
+    [SerializeField] bool IsRotating = false;
+    [SerializeField] bool HasAnimations = true;
     private Transform target;
     private float TimeUntilFire;
 
@@ -52,8 +53,9 @@ public class BaseTurretScript : MonoBehaviour
 
     private void Shoot()
     {
-        animator.SetTrigger("Attack");
-        Invoke("Shoot2", timeBeforeAnimation);
+            animator.SetTrigger("Attack");
+            Invoke("Shoot2", timeBeforeAnimation);
+
     }
     private void Shoot2()
     {
@@ -85,36 +87,49 @@ public class BaseTurretScript : MonoBehaviour
 #endif
     private void RotateTowardsTarget() // je¿eli jednostka jest jednostk¹ która ma 4 kierunki
     {
-        Vector2 direction = target.position - transform.position;
+        if (HasAnimations)
+        {
+            if (!IsRotating)
+            {
+                Vector2 direction = target.position - transform.position;
 
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            if (direction.x > 0) //prawo
-            {
-                CurrentSprite.sprite = SideAttack;
-                ObjectToRotate.rotation = Quaternion.Euler(0, 180, 0);
-                animator.SetInteger("Direction", 0);
-            }
-            else //lewo
-            {
-                CurrentSprite.sprite = SideAttack;
-                ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
-                animator.SetInteger("Direction", 0);
-            }
-        }
-        else
-        {
-            if (direction.y > 0) //góra
-            {
-                CurrentSprite.sprite = UpAttack;
-                ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
-                animator.SetInteger("Direction", 2);
+                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+                {
+                    if (direction.x > 0) //prawo
+                    {
+                        CurrentSprite.sprite = SideAttack;
+                        ObjectToRotate.rotation = Quaternion.Euler(0, 180, 0);
+                        animator.SetInteger("Direction", 0);
+                    }
+                    else //lewo
+                    {
+                        CurrentSprite.sprite = SideAttack;
+                        ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
+                        animator.SetInteger("Direction", 0);
+                    }
+                }
+                else
+                {
+                    if (direction.y > 0) //góra
+                    {
+                        CurrentSprite.sprite = UpAttack;
+                        ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
+                        animator.SetInteger("Direction", 2);
+                    }
+                    else
+                    {
+                        CurrentSprite.sprite = DownAttack;
+                        ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
+                        animator.SetInteger("Direction", 1);
+                    }
+                }
             }
             else
             {
-                CurrentSprite.sprite = DownAttack;
-                ObjectToRotate.rotation = Quaternion.Euler(0, 0, 0);
-                animator.SetInteger("Direction", 1);
+                float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+
+                Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                ObjectToRotate.rotation = Quaternion.RotateTowards(ObjectToRotate.rotation, targetRotation, RotationSpeed * Time.deltaTime);
             }
         }
     }
@@ -123,11 +138,4 @@ public class BaseTurretScript : MonoBehaviour
     {
          animator = GetComponentInChildren<Animator>();   
     }
-    //private void RotateTowardsTarget() //je¿eli jednostka jest jednostk¹ która ma krêciæ g³ow¹
-    //{
-    //    float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
-
-    //    Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-    //    ObjectToRotate.rotation = Quaternion.RotateTowards(ObjectToRotate.rotation, targetRotation, RotationSpeed * Time.deltaTime);
-    //}
 }

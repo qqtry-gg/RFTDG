@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4780077688096190272}
   - component: {fileID: 3638649843741220974}
   m_Layer: 7
-  m_Name: PoisonArrow
+  m_Name: PoisonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,12 +83,12 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -855298285791758126, guid: 0b63926bc66572e4bb24ed5c51fe6778, type: 3}
-  m_Color: {r: 0.659919, g: 0.9150943, b: 0.5395603, a: 1}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0, g: 1, b: 0.06844115, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.03, y: 0.14}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,10 +130,10 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03, y: 0.14}
-    newSize: {x: 0.03, y: 0.14}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 6177183212538859575}
-  Bulletspeed: 5
+  Bulletspeed: 7
   rotationSpeed: 30
   dmg: 1
 --- !u!114 &3638649843741220974
@@ -195,3 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64251d7df93f46458e8256985c7571a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  EnemyHealth: {fileID: 0}
+  PoisonHitCounter: 0
+  PoisonCooldownBeforeDMG: 1
+  PoisonDMG: 1
