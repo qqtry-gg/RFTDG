@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyMovementScript : MonoBehaviour
 {
     [Header("Atributes")]
-    [SerializeField] private float movespeed = 2f;
+    public float movespeed = 2f;
     [Header("References")]
     [SerializeField] Rigidbody2D rb;
 

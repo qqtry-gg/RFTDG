@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject Goblin;
     [SerializeField] GameObject Wolf;
     [SerializeField] GameObject Orc;
+    [SerializeField] GameObject ArmoredSkeleton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,5 +39,9 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnBat()
     {
         Instantiate(Bat, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnArmoredSkeleton()
+    {
+        Instantiate(ArmoredSkeleton, SpawnPlace.position, Quaternion.identity);
     }
 }

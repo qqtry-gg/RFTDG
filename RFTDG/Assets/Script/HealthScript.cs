@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
+    [SerializeField] EnemyMovementScript enemyMovementScript;
     [Header("Attributes")]
     [SerializeField] float hitpoints = 2f;
     bool is_PoisonWorking = false;
@@ -13,7 +14,8 @@ public class HealthScript : MonoBehaviour
 
         if (hitpoints <= 0)
         {
-            Destroy(gameObject);
+            animator.SetTrigger("Die");
+            StartCoroutine(DestoryAfterAnimation());
         }
     }
 
@@ -46,5 +48,18 @@ public class HealthScript : MonoBehaviour
             is_PoisonWorking = false;
             PoisonHitCounter = 0;
         }
+    }
+    IEnumerator DestoryAfterAnimation()
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        enemyMovementScript.movespeed = 0f;
+        yield return new WaitForSeconds(stateInfo.length);
+        Destroy(gameObject);
+    }
+
+    Animator animator;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
     }
 }
