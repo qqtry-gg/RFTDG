@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -3463070028636962532, guid: 05067fa277a562a4a9b352b18db1263a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6740237, g: 0.8679245, b: 0.65913135, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 1021327000545907795, guid: 7186feace25eb25499d872b84d403f26, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6740237, g: 0.8679245, b: 0.65913135, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 1191603342004194914}
   m_Layer: 0
-  m_Name: ArcherTowerlvl4
+  m_Name: PoisonArcherTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ Transform:
   m_GameObject: {fileID: 8693902912695432378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.519348, y: -2.0252585, z: 0}
+  m_LocalPosition: {x: -2.5, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -289,9 +289,9 @@ MonoBehaviour:
     m_Bits: 64
   CurrentSprite: {fileID: 4959455417842473758}
   ObjectToRotate: {fileID: 9172315620754369248}
-  BulletPrefab: {fileID: 3907389932859765376, guid: 761b604e9b1397f4d80a20e1deff1f48, type: 3}
+  BulletPrefab: {fileID: 3907389932859765376, guid: 5bcc57fbfdeba074c800e43cca459310, type: 3}
   FiringPoint: {fileID: 9200713561974308557}
-  targetingRange: 6.5
+  targetingRange: 5
   RotationSpeed: 60
-  bps: 1.2
+  bps: 0.75
   timeBeforeAnimation: 0.3

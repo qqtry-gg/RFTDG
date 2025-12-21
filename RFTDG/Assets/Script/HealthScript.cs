@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] float hitpoints = 2f;
+    bool is_PoisonWorking = false;
 
     public void TakeDamage(float damage)
     {
@@ -25,5 +27,24 @@ public class HealthScript : MonoBehaviour
     void Update()
     {
         
+    }
+    public void StartPosionEffect(int PoisonHitCounter, float PoisonCooldownBeforeDMG, float PoisonDMG)
+    {
+        StartCoroutine(Poison(PoisonHitCounter, PoisonCooldownBeforeDMG,PoisonDMG));
+    }
+    IEnumerator Poison(int PoisonHitCounter, float PoisonCooldownBeforeDMG, float PoisonDMG)
+    {
+        if (!is_PoisonWorking)
+        {
+            is_PoisonWorking = true;
+            for (int i = 3; PoisonHitCounter <= i;)
+            {
+                yield return new WaitForSeconds(PoisonCooldownBeforeDMG);
+                PoisonHitCounter++;
+                TakeDamage(PoisonDMG);
+            }
+            is_PoisonWorking = false;
+            PoisonHitCounter = 0;
+        }
     }
 }
