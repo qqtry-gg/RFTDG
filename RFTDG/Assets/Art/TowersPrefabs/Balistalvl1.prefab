@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3465286685962602723, guid: d6997aa6f6f16ff459eaadfa252196e0, type: 3}
+  m_Sprite: {fileID: 9032203404681445082, guid: 407734c1bd974774bba28169e3fdb0f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.62}
+  m_Size: {x: 1.92, y: 1.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -121,6 +121,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1096632229623606874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6159450886616426082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8220840076377963372}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8220840076377963372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6159450886616426082}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0.000000059604638, w: 1}
+  m_LocalPosition: {x: 0.00000007242202, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9172315620754369248}
+  m_Father: {fileID: 1096632229623606874}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6235939461650145811
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +165,7 @@ GameObject:
   - component: {fileID: 4959455417842473758}
   - component: {fileID: 6346743528499500133}
   m_Layer: 0
-  m_Name: Archer
+  m_Name: Balista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,11 +180,11 @@ Transform:
   m_GameObject: {fileID: 6235939461650145811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.34, z: 0}
+  m_LocalPosition: {x: 0, y: -0.70000064, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1096632229623606874}
+  m_Father: {fileID: 8220840076377963372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4959455417842473758
 SpriteRenderer:
@@ -201,7 +233,7 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1021327000545907795, guid: 7186feace25eb25499d872b84d403f26, type: 3}
+  m_Sprite: {fileID: 2026267341308145306, guid: 306df7a7d0c891340abd60e5493f3103, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -222,7 +254,7 @@ Animator:
   m_GameObject: {fileID: 6235939461650145811}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e903d85768ae3f47919e977dff6565c, type: 2}
+  m_Controller: {fileID: 9100000, guid: dcf019acc48c10f479918f29a6ba1763, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,7 +277,7 @@ GameObject:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 1191603342004194914}
   m_Layer: 0
-  m_Name: ArcherTowerlvl5
+  m_Name: Balistalvl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,13 +292,13 @@ Transform:
   m_GameObject: {fileID: 8693902912695432378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.802255, y: -3.8984118, z: 0}
+  m_LocalPosition: {x: -7.801277, y: 1.9771817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9172315620754369248}
   - {fileID: 844898366667190036}
   - {fileID: 9200713561974308557}
+  - {fileID: 8220840076377963372}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1191603342004194914
@@ -288,12 +320,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   CurrentSprite: {fileID: 4959455417842473758}
-  ObjectToRotate: {fileID: 9172315620754369248}
+  ObjectToRotate: {fileID: 0}
   BulletPrefab: {fileID: 3907389932859765376, guid: 761b604e9b1397f4d80a20e1deff1f48, type: 3}
   FiringPoint: {fileID: 9200713561974308557}
   targetingRange: 7
   RotationSpeed: 60
   bps: 1.6
   timeBeforeAnimation: 0.3
-  IsRotating: 0
+  IsRotating: 1
   HasAnimations: 1
