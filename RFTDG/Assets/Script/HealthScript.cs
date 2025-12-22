@@ -1,16 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
     [SerializeField] EnemyMovementScript enemyMovementScript;
+    [SerializeField] Image healtBar;
     [Header("Attributes")]
     [SerializeField] float hitpoints = 2f;
+    float maxHealth;
     bool is_PoisonWorking = false;
 
     public void TakeDamage(float damage)
     {
         hitpoints -= damage;
+        healtBar.fillAmount = hitpoints / maxHealth;
 
         if (hitpoints <= 0)
         {
@@ -22,7 +26,7 @@ public class HealthScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        maxHealth = hitpoints;
     }
 
     // Update is called once per frame
