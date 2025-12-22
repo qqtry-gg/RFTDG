@@ -320,12 +320,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   CurrentSprite: {fileID: 4959455417842473758}
-  ObjectToRotate: {fileID: 0}
+  ObjectToRotate: {fileID: 8220840076377963372}
   BulletPrefab: {fileID: 3907389932859765376, guid: 761b604e9b1397f4d80a20e1deff1f48, type: 3}
   FiringPoint: {fileID: 9200713561974308557}
   targetingRange: 7
   RotationSpeed: 60
-  bps: 1.6
+  bps: 0.35
   timeBeforeAnimation: 0.3
   IsRotating: 1
   HasAnimations: 1

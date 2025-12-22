@@ -293,7 +293,7 @@ MonoBehaviour:
   FiringPoint: {fileID: 9200713561974308557}
   targetingRange: 5.5
   RotationSpeed: 60
-  bps: 0.5
+  bps: 0.6
   timeBeforeAnimation: 0.3
   IsRotating: 0
   HasAnimations: 0

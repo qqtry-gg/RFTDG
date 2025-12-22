@@ -14,7 +14,10 @@ public class BulletScript : MonoBehaviour
     [SerializeField] float dmg = 1f;
 
     private Transform Target;
-
+    private void Start()
+    {
+        StartCoroutine(DestroyObjectAfterTime(5));
+    }
 
     public void SetTarget(Transform _transform)
     {
@@ -22,7 +25,6 @@ public class BulletScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        StartCoroutine(DestroyObjectAfterTime(5));
         if (!Target) return;
         Vector2 direction = (Target.position - transform.position).normalized;
 
@@ -37,6 +39,7 @@ public class BulletScript : MonoBehaviour
     {
         collision.transform.gameObject.GetComponent<HealthScript>().TakeDamage(dmg);
         Destroy(gameObject);
+        
     }
     IEnumerator DestroyObjectAfterTime(int seconds)
     {

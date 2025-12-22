@@ -291,7 +291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8693902912695432378}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.000000059604638, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.7865567, y: -2.7620404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   CurrentSprite: {fileID: 4959455417842473758}
-  ObjectToRotate: {fileID: 0}
+  ObjectToRotate: {fileID: 7799811355505220022}
   BulletPrefab: {fileID: 3907389932859765376, guid: e3319e9c731616848baa66353ddf178b, type: 3}
   FiringPoint: {fileID: 9200713561974308557}
   targetingRange: 10
