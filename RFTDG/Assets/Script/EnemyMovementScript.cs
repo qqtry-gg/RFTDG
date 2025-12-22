@@ -9,6 +9,10 @@ public class EnemyMovementScript : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    [SerializeField] bool isSpriteRotated = false;
+
+    Vector3 previousPosition;
+    SpriteRenderer spriteRenderer;
 
     private void Update()
     {
@@ -30,6 +34,9 @@ public class EnemyMovementScript : MonoBehaviour
     }
     private void Start()
     {
+        previousPosition = transform.position;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         target = LevelManager.main.path[pathIndex];
     }
 
@@ -38,5 +45,32 @@ public class EnemyMovementScript : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * movespeed;
+
+        Vector3 currentPositon = transform.position;
+        float movementX = currentPositon.x - previousPosition.x;
+        if (!isSpriteRotated)
+        {
+            if (movementX > 0.01f) //idzie w prawo
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (movementX < -0.01f) //idzie w lewo
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
+        else
+        {
+            if (movementX > 0.01f) //idzie w prawo
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (movementX < -0.01f) //idzie w lewo
+            {
+                spriteRenderer.flipX = false;
+            }
+        }
+
+            previousPosition = currentPositon;
     }
 }

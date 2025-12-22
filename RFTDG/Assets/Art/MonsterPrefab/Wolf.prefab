@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
   movespeed: 4
   rb: {fileID: 4039901463788289763}
+  isSpriteRotated: 1
 --- !u!114 &4574904713601901565
 MonoBehaviour:
   m_ObjectHideFlags: 0
