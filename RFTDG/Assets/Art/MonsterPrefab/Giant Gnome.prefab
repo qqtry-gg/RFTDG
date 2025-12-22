@@ -156,8 +156,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.01}
-  m_Radius: 0.2
+  m_Offset: {x: 0, y: -0.05}
+  m_Radius: 0.18
 --- !u!114 &1799265903136321964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 2.5
+  movespeed: 1.5
   rb: {fileID: 4039901463788289763}
 --- !u!114 &4574904713601901565
 MonoBehaviour:
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
-  hitpoints: 3
+  hitpoints: 60
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7
@@ -196,7 +196,7 @@ Animator:
   m_GameObject: {fileID: 335594504579162428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73e9b8cd046651b489f14073546503bd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4d64edf48e6d4e84b8373f4aa2abad3c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
