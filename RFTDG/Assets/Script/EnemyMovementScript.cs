@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyMovementScript : MonoBehaviour
@@ -13,6 +14,7 @@ public class EnemyMovementScript : MonoBehaviour
 
     Vector3 previousPosition;
     SpriteRenderer spriteRenderer;
+    public float normalspeed;
 
     private void Update()
     {
@@ -38,6 +40,7 @@ public class EnemyMovementScript : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         target = LevelManager.main.path[pathIndex];
+        normalspeed = movespeed;
     }
 
     private void FixedUpdate()

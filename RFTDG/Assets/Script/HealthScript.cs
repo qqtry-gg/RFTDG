@@ -7,8 +7,9 @@ public class HealthScript : MonoBehaviour
     [SerializeField] EnemyMovementScript enemyMovementScript;
     [SerializeField] Image healtBar;
     [SerializeField] SpawnMobsAfterDeath spawnMob;
+    [SerializeField] Phase2 secondphase;
     [Header("Attributes")]
-    [SerializeField] float hitpoints = 2f;
+    public float hitpoints = 2f;
     float maxHealth;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
@@ -16,6 +17,11 @@ public class HealthScript : MonoBehaviour
     {
         hitpoints -= damage;
         healtBar.fillAmount = hitpoints / maxHealth;
+
+        if (secondphase != null && !enemyDied)
+        {
+            secondphase.IncreaseSpeed();
+        }
 
         if (hitpoints <= 0)
         {
@@ -25,6 +31,7 @@ public class HealthScript : MonoBehaviour
                 spawnMob.SpawnMobs();
                 enemyDied = true;
             }
+
             enemyDied = true;
             StartCoroutine(DestoryAfterAnimation());
         }
