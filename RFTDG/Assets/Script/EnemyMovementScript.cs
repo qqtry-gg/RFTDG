@@ -8,7 +8,7 @@ public class EnemyMovementScript : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
 
     private Transform target;
-    private int pathIndex = 0;
+    public int pathIndex = 0;
     [SerializeField] bool isSpriteRotated = false;
 
     Vector3 previousPosition;

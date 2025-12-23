@@ -6,11 +6,12 @@ public class HealthScript : MonoBehaviour
 {
     [SerializeField] EnemyMovementScript enemyMovementScript;
     [SerializeField] Image healtBar;
+    [SerializeField] SpawnMobsAfterDeath spawnMob;
     [Header("Attributes")]
     [SerializeField] float hitpoints = 2f;
     float maxHealth;
     bool is_PoisonWorking = false;
-
+    bool enemyDied = false;
     public void TakeDamage(float damage)
     {
         hitpoints -= damage;
@@ -19,6 +20,12 @@ public class HealthScript : MonoBehaviour
         if (hitpoints <= 0)
         {
             animator.SetTrigger("Die");
+            if (spawnMob != null && !enemyDied)
+            {
+                spawnMob.SpawnMobs();
+                enemyDied = true;
+            }
+            enemyDied = true;
             StartCoroutine(DestoryAfterAnimation());
         }
     }
