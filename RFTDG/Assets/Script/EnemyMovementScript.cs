@@ -76,4 +76,8 @@ public class EnemyMovementScript : MonoBehaviour
 
             previousPosition = currentPositon;
     }
+    public void ChangeSpeed(float newSpeed)
+    {
+        movespeed = newSpeed;
+    }
 }

@@ -34,6 +34,7 @@ public class Phase2 : MonoBehaviour
         EnemyMovementScript.movespeed = 0;
         animator.SetBool("Transformation", true);
         yield return new WaitForSeconds(secondsTransformationCooldown);
+        EnemyMovementScript.normalspeed = EnemyMovementScript.normalspeed * SpeedIncreaseTimes;
         animator.SetBool("Transformation", false);
         GetComponent<SpriteRenderer>().material.color = Color.darkRed;
         EnemyMovementScript.movespeed = EnemyMovementScript.normalspeed * SpeedIncreaseTimes;
