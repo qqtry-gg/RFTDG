@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 1799265903136321964}
   - component: {fileID: 4574904713601901565}
   - component: {fileID: 6669343959562102164}
+  - component: {fileID: 8953951124269549937}
   m_Layer: 6
-  m_Name: Goblin
+  m_Name: SlimeBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 335594504579162428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.5, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -19.5, y: 1, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6299173231688560209}
@@ -85,12 +86,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7385789195546760866, guid: c1cdd26cc09ad224884556bc4d8296ae, type: 3}
+  m_Sprite: {fileID: -1165160126693205279, guid: 36c306bbdf8331549ad33fdf28f674e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -157,8 +158,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Radius: 0.2
+  m_Offset: {x: 0, y: -0.09}
+  m_Radius: 0.09
 --- !u!114 &1799265903136321964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 2.25
+  movespeed: 1
   rb: {fileID: 4039901463788289763}
   pathIndex: 0
   isSpriteRotated: 0
@@ -190,9 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
   healtBar: {fileID: 2935723846316087641}
-  spawnMob: {fileID: 0}
+  spawnMob: {fileID: 8953951124269549937}
   secondphase: {fileID: 0}
-  hitpoints: 8
+  hitpoints: 75
 --- !u!95 &6669343959562102164
 Animator:
   serializedVersion: 7
@@ -203,7 +204,7 @@ Animator:
   m_GameObject: {fileID: 335594504579162428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 727baae980564e14dad3bc5074ea1421, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6dadbe3fb506334da971d71ab1fc40c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -215,6 +216,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8953951124269549937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b7b7db7c714d646a569ca84d5b7a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnMobsAfterDeath
+  HealthScript: {fileID: 4574904713601901565}
+  amountofMobs: 4
+  MobToSpawn: {fileID: 335594504579162428, guid: a13861792c1a2074e99f3e3a47cce7df, type: 3}
+  Separation: {x: 0.5, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &620220513806449344
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +336,7 @@ RectTransform:
   m_GameObject: {fileID: 2627066994259846364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0005, y: 0.0002, z: 0.5}
+  m_LocalScale: {x: 0.0003, y: 0.00012, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6092213400942995488}
@@ -327,7 +345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.2}
+  m_AnchoredPosition: {x: 0, y: 0.049999982}
   m_SizeDelta: {x: 1143, y: 542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &627909457639631261

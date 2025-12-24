@@ -5,10 +5,12 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] Transform SpawnPlace;
     [SerializeField] GameObject Skeleton;
     [SerializeField] GameObject Bat;
+    [SerializeField] GameObject Slime;
     [SerializeField] GameObject Goblin;
     [SerializeField] GameObject Wolf;
     [SerializeField] GameObject Orc;
     [SerializeField] GameObject ArmoredSkeleton;
+    [SerializeField] GameObject SlimeBoss;
     [SerializeField] GameObject FlyingGolem;
     [SerializeField] GameObject GiantMushroom;
     [SerializeField] GameObject Golem;
@@ -68,5 +70,13 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnReinforcedFylingGolem()
     {
         Instantiate(ReinforcedFylingGolem, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnSlime()
+    {
+        Instantiate(Slime, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnSlimeBoss()
+    {
+        Instantiate(SlimeBoss, SpawnPlace.position, Quaternion.identity);
     }
 }
