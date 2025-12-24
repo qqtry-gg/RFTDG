@@ -40,6 +40,9 @@ public class EnemyMovementScript : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         target = LevelManager.main.path[pathIndex];
+    }
+    private void Awake()
+    {
         normalspeed = movespeed;
     }
 

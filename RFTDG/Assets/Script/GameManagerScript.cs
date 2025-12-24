@@ -16,6 +16,10 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject Golem;
     [SerializeField] GameObject GoldGolem;
     [SerializeField] GameObject ReinforcedFylingGolem;
+    [SerializeField] GameObject Necromanta;
+    [SerializeField] GameObject GoldBabyDragon;
+    [SerializeField] GameObject TwinHeadedRedBabyDragon;
+    [SerializeField] GameObject FrostGuardian;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -78,5 +82,21 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnSlimeBoss()
     {
         Instantiate(SlimeBoss, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnNecromanta()
+    {
+        Instantiate(Necromanta, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnGoldBabyDragon()
+    {
+        Instantiate(GoldBabyDragon, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnTwinHeadedRedBabyDragon()
+    {
+        Instantiate(TwinHeadedRedBabyDragon, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnFrostGuardian()
+    {
+        Instantiate(FrostGuardian, SpawnPlace.position, Quaternion.identity);
     }
 }
