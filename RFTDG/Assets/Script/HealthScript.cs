@@ -80,4 +80,12 @@ public class HealthScript : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    public void Regenerate()
+    {
+        if (hitpoints < maxHealth)
+        {
+            hitpoints += maxHealth / 100;
+            healtBar.fillAmount = hitpoints / maxHealth;
+        }
+    }
 }

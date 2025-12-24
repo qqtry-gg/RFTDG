@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1799265903136321964}
   - component: {fileID: 4574904713601901565}
   - component: {fileID: -3687797841040834651}
+  - component: {fileID: 8445363588474555046}
   m_Layer: 6
   m_Name: Orc
   m_TagString: Untagged
@@ -173,7 +174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
   movespeed: 1.8
   rb: {fileID: 4039901463788289763}
+  pathIndex: 0
   isSpriteRotated: 0
+  normalspeed: 0
 --- !u!114 &4574904713601901565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
   healtBar: {fileID: 5114616020829063395}
+  spawnMob: {fileID: 0}
+  secondphase: {fileID: 0}
   hitpoints: 20
 --- !u!95 &-3687797841040834651
 Animator:
@@ -211,6 +216,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8445363588474555046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9d2409b6ca04b4aa9e3949f4c69d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassiveRegeneration
+  hp: {fileID: 4574904713601901565}
 --- !u!1 &4176534966833013125
 GameObject:
   m_ObjectHideFlags: 0
