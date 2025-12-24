@@ -33,6 +33,7 @@ public class Phase2 : MonoBehaviour
     {
         EnemyMovementScript.movespeed = 0;
         animator.SetBool("Transformation", true);
+        HealthScript.hitpoints += HealthScript.maxHealth / 5;
         yield return new WaitForSeconds(secondsTransformationCooldown);
         EnemyMovementScript.normalspeed = EnemyMovementScript.normalspeed * SpeedIncreaseTimes;
         animator.SetBool("Transformation", false);

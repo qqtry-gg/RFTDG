@@ -10,7 +10,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField] Phase2 secondphase;
     [Header("Attributes")]
     public float hitpoints = 2f;
-    float maxHealth;
+    public float maxHealth;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
     public void TakeDamage(float damage)

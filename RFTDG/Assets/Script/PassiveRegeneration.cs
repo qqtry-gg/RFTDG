@@ -17,8 +17,11 @@ public class PassiveRegeneration : MonoBehaviour
     }
     IEnumerator Regenerate()
     {
-        yield return new WaitForSeconds(1);
-        hp.Regenerate();
-        StartCoroutine(Regenerate());
+        if (hp.hitpoints > 0)
+        {
+            yield return new WaitForSeconds(1);
+            hp.Regenerate();
+            StartCoroutine(Regenerate());
+        }
     }
 }

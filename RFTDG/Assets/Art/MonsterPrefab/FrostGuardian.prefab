@@ -192,7 +192,8 @@ MonoBehaviour:
   healtBar: {fileID: 6294703542443137791}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
-  hitpoints: 100
+  hitpoints: 2500
+  maxHealth: 0
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7
