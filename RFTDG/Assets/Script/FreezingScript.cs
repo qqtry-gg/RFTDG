@@ -9,7 +9,7 @@ public class FreezingScript : MonoBehaviour
     bool isUsed = false;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((enemyLayer & (1 << collision.gameObject.layer)) != 0 && !isUsed && !(collision.gameObject.CompareTag("Boss")))
+        if ((enemyLayer & (1 << collision.gameObject.layer)) != 0 && !isUsed && !(collision.gameObject.CompareTag("Boss")) && !(collision.gameObject.CompareTag("MiniBoss")))
         {
             enemyMovementScript = collision.gameObject.GetComponent<EnemyMovementScript>();
             enemyMovementScript.StartFreze(FreezeTime);
