@@ -17,7 +17,7 @@ public class SlowmoScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (((1 << collision.gameObject.layer) & enemyLayer) != 0)
+        if (((1 << collision.gameObject.layer) & enemyLayer) != 0 && !(collision.CompareTag("MiniBoss")) && !(collision.CompareTag("Boss")))
         {
             enemyMovementScript = collision.gameObject.GetComponent<EnemyMovementScript>();
             enemyMovementScript.ChangeSpeed(enemyMovementScript.normalspeed / 2);
@@ -25,7 +25,7 @@ public class SlowmoScript : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (((1 << collision.gameObject.layer) & enemyLayer) != 0)
+        if (((1 << collision.gameObject.layer) & enemyLayer) != 0 && !(collision.CompareTag("MiniBoss")) && !(collision.CompareTag("Boss")))
         {
             enemyMovementScript = collision.gameObject.GetComponent<EnemyMovementScript>();
             enemyMovementScript.ChangeSpeed(enemyMovementScript.normalspeed);

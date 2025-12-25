@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -82,5 +83,17 @@ public class EnemyMovementScript : MonoBehaviour
     public void ChangeSpeed(float newSpeed)
     {
         movespeed = newSpeed;
+    }
+    public void StartFreze(float FreezeTimefr)
+    {
+        StartCoroutine(Freeze(FreezeTimefr));
+    }
+    IEnumerator Freeze(float Freezetime)
+    {
+        movespeed = 0;
+        spriteRenderer.color = Color.lightBlue;
+        yield return new WaitForSeconds(Freezetime);
+        spriteRenderer.color = Color.white;
+        movespeed = normalspeed;
     }
 }

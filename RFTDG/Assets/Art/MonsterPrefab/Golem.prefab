@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6110412159286498176}
   m_Layer: 6
   m_Name: Golem
-  m_TagString: Untagged
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   rb: {fileID: 4039901463788289763}
   pathIndex: 0
   isSpriteRotated: 0
+  normalspeed: 0
 --- !u!114 &4574904713601901565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +192,9 @@ MonoBehaviour:
   enemyMovementScript: {fileID: 1799265903136321964}
   healtBar: {fileID: 6294703542443137791}
   spawnMob: {fileID: 6110412159286498176}
+  secondphase: {fileID: 0}
   hitpoints: 125
+  maxHealth: 0
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7

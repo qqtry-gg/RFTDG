@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 793214064197010299}
   m_Layer: 6
   m_Name: Necromancer
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   hitpoints: 100
+  maxHealth: 0
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7

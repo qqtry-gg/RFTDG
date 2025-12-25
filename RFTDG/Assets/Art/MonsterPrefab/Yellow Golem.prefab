@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -7989680905678022260}
   m_Layer: 6
   m_Name: Yellow Golem
-  m_TagString: Untagged
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: -7989680905678022260}
   hitpoints: 200
+  maxHealth: 0
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2474288931461103657}
   m_Layer: 6
   m_Name: Baby Golden Dragon
-  m_TagString: Untagged
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,6 +193,7 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   hitpoints: 750
+  maxHealth: 0
 --- !u!95 &2474288931461103657
 Animator:
   serializedVersion: 7
