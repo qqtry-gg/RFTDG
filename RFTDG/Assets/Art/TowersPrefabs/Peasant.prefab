@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d992e2909f3f843830d24416e741d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  MovementSpeed: 2
+  MovementSpeed: 2.5
   spriteRenderer: {fileID: 6795390675068917533}
 --- !u!95 &3167756325284698454
 Animator:
@@ -189,6 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   unitHitPoints: 5
+  animationInvokeDelay: 0.3
+  movementScript: {fileID: 5833453748996100848}
+  animator: {fileID: 3167756325284698454}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64

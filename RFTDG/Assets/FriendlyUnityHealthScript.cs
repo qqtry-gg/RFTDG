@@ -3,6 +3,9 @@ using UnityEngine;
 public class FriendlyUnityHealthScript : MonoBehaviour
 {
     [SerializeField] float unitHitPoints;
+    [SerializeField] float animationInvokeDelay = 0.5f;
+    [SerializeField] FriendlyUnityMovementScript movementScript;
+    [SerializeField] Animator animator;
     [SerializeField] LayerMask enemyLayer;
     HealthScript healthScript;
     float hpToDeal;
@@ -21,8 +24,15 @@ public class FriendlyUnityHealthScript : MonoBehaviour
             unitHitPoints -= hpToDeal;
             if (unitHitPoints <= 0)
             {
-                Destroy(gameObject);
+                unitHitPoints = 0;
+                movementScript.MovementSpeed = 0f;
+                animator.SetTrigger("Die");
+                Invoke("DestroyUnit", animationInvokeDelay);
             }
         }
+    }
+    void DestroyUnit()
+    {
+        Destroy(gameObject);
     }
 }

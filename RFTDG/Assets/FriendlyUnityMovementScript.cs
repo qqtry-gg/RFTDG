@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FriendlyUnityMovementScript : MonoBehaviour
 {
-    [SerializeField] float MovementSpeed = 2f;
+    public float MovementSpeed = 2f;
     [SerializeField] SpriteRenderer spriteRenderer;
     LevelManager levelManager;
     int count = 0;
