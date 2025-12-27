@@ -9,6 +9,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField] SpawnMobsAfterDeath spawnMob;
     [SerializeField] Phase2 secondphase;
     [Header("Attributes")]
+    public float Enemydmg;
     public float hitpoints = 2f;
     public float maxHealth;
     bool is_PoisonWorking = false;
@@ -40,6 +41,7 @@ public class HealthScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Enemydmg = maxHealth;
         maxHealth = hitpoints;
     }
 

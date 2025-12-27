@@ -1,38 +1,41 @@
+using System.Collections;
 using UnityEngine;
 
 public class FriendlyUnityHealthScript : MonoBehaviour
 {
     [SerializeField] float unitHitPoints;
-    [SerializeField] float animationInvokeDelay = 0.5f;
     [SerializeField] FriendlyUnityMovementScript movementScript;
     [SerializeField] Animator animator;
     [SerializeField] LayerMask enemyLayer;
     HealthScript healthScript;
-    float hpToDeal;
+    bool isDying = false;
+    float dmg;
 
-
+    private void Start()
+    {
+        dmg = unitHitPoints;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((enemyLayer & (1 << collision.gameObject.layer)) != 0)
         {
             healthScript = collision.gameObject.GetComponent<HealthScript>();
-            if (healthScript != null)
+            unitHitPoints -= healthScript.Enemydmg;
+            healthScript.TakeDamage(dmg);
+            if (unitHitPoints <= 0 && !isDying)
             {
-                hpToDeal = healthScript.hitpoints;
-                healthScript.TakeDamage(unitHitPoints);
-            }
-            unitHitPoints -= hpToDeal;
-            if (unitHitPoints <= 0)
-            {
-                unitHitPoints = 0;
-                movementScript.MovementSpeed = 0f;
-                animator.SetTrigger("Die");
-                Invoke("DestroyUnit", animationInvokeDelay);
+                StartCoroutine(DieAnimation());
+                isDying = true;
             }
         }
     }
-    void DestroyUnit()
+    IEnumerator DieAnimation()
     {
+        movementScript.MovementSpeed = 0f;
+        GetComponent<Collider2D>().enabled = false;
+        animator.SetTrigger("Die");
+        float animationDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animationDuration); // czas trwania animacji
         Destroy(gameObject);
     }
 }
