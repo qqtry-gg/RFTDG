@@ -11,4 +11,7 @@ public class LevelManager : MonoBehaviour
     {
         main = this;
     }
+    [Header("FriendlyUnitys")]
+    public Transform startPointU;
+    public Transform[] PathU;
 }

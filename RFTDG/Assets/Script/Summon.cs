@@ -10,6 +10,7 @@ public class Summon : MonoBehaviour
     [SerializeField] Vector3 offset;
     [SerializeField] Animator animator;
     [SerializeField] EnemyMovementScript EnemyMovementScript;
+    [SerializeField] float AnimationCooldown = 1.65f;
     GameObject EnemySpawned;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -29,10 +30,10 @@ public class Summon : MonoBehaviour
     {
         animator.SetTrigger("Summon");
         EnemyMovementScript.movespeed = 0;
-        yield return new WaitForSeconds(1.65f);
+        yield return new WaitForSeconds(AnimationCooldown);
         SpawnMobs();
         EnemyMovementScript.movespeed = EnemyMovementScript.normalspeed;
-        yield return new WaitForSeconds(timebeforenextsummon - 2);
+        yield return new WaitForSeconds(timebeforenextsummon - AnimationCooldown);
         StartCoroutine(Spawning());
     }
 }
