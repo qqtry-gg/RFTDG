@@ -3,6 +3,7 @@ using UnityEngine;
 public class FriendlyUnityMovementScript : MonoBehaviour
 {
     [SerializeField] float MovementSpeed = 2f;
+    [SerializeField] SpriteRenderer spriteRenderer;
     LevelManager levelManager;
     int count = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,6 +29,14 @@ public class FriendlyUnityMovementScript : MonoBehaviour
         if (distance <= 0.1f) 
         {
             count++;
+        }
+        if (transform.position.x - levelManager.PathU[count].transform.position.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
         }
     }
 }
