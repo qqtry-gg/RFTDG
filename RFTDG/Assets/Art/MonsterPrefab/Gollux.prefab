@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 4574904713601901565}
   - component: {fileID: 724672291155199720}
   m_Layer: 6
-  m_Name: FrostGuardian
-  m_TagString: Boss
+  m_Name: Gollux
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.5, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8636446911129471028}
@@ -82,10 +82,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 962851689
-  m_SortingLayer: 1
-  m_SortingOrder: 100
-  m_Sprite: {fileID: 8681008312180965034, guid: 0e6db740443ccf445b568f32f88f4eac, type: 3}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 3619233616230784253, guid: 97da77e56c05a4d49beec1b23fdfde0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,8 +157,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.05, y: 0}
-  m_Radius: 0.2
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.3
 --- !u!114 &1799265903136321964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 0.5
+  movespeed: 0.4
   rb: {fileID: 4039901463788289763}
   pathIndex: 0
-  isSpriteRotated: 1
+  isSpriteRotated: 0
   normalspeed: 0
 --- !u!114 &4574904713601901565
 MonoBehaviour:
@@ -192,7 +192,7 @@ MonoBehaviour:
   healtBar: {fileID: 6294703542443137791}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
-  hitpoints: 2250
+  hitpoints: 375
   maxHealth: 0
 --- !u!95 &724672291155199720
 Animator:
@@ -204,7 +204,7 @@ Animator:
   m_GameObject: {fileID: 335594504579162428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 05d5c99184a56044d98f9a64faf1076a, type: 2}
+  m_Controller: {fileID: 9100000, guid: c85245aa9587cdd4eb1f7cf1922b0b40, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -319,7 +319,7 @@ RectTransform:
   m_GameObject: {fileID: 8311376885432949540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.0004, z: 0.001}
+  m_LocalScale: {x: 0.0005, y: 0.0002, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7670327434324801403}
@@ -328,7 +328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0000003427267, y: 0.5}
+  m_AnchoredPosition: {x: -0.013, y: 0.35714287}
   m_SizeDelta: {x: 1000, y: 542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &9184679659515570957
@@ -352,7 +352,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 962851689
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_TargetDisplay: 0
 --- !u!114 &4629773980355827507
 MonoBehaviour:

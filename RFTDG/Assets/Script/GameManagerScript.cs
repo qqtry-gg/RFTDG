@@ -21,6 +21,9 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject TwinHeadedRedBabyDragon;
     [SerializeField] GameObject FrostGuardian;
     [SerializeField] GameObject TheElderMountainsDragon;
+    [SerializeField] GameObject WarHog;
+    [SerializeField] GameObject Gollux;
+    [SerializeField] GameObject BringerOfDeath;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -103,5 +106,17 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnTheElderMountainsDragon()
     {
         Instantiate(TheElderMountainsDragon, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnWarHog()
+    {
+        Instantiate(WarHog, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnGollux()
+    {
+        Instantiate(Gollux, SpawnPlace.position, Quaternion.identity);
+    }
+    public void SpawnBringerOfDeath()
+    {
+        Instantiate(BringerOfDeath, SpawnPlace.position, Quaternion.identity);
     }
 }

@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 72686a150eff57449a41f1f91237e8f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4219130151559410707
+    second: Warhog_Death_0
+  - first:
+      213: -4771072681758396369
+    second: Warhog_Death_1
+  - first:
+      213: -7087156060989245689
+    second: Warhog_Death_2
+  - first:
+      213: -5666926775590830425
+    second: Warhog_Death_3
+  - first:
+      213: -5796101597942578175
+    second: Warhog_Death_4
+  - first:
+      213: 5783087966005553367
+    second: Warhog_Death_5
+  - first:
+      213: 8092443430618975684
+    second: Warhog_Death_6
+  - first:
+      213: 9141948547822849287
+    second: Warhog_Death_7
+  - first:
+      213: 5368678895503677489
+    second: Warhog_Death_8
+  - first:
+      213: 3819016415797874240
+    second: Warhog_Death_9
+  - first:
+      213: -4578408849692013819
+    second: Warhog_Death_10
+  - first:
+      213: -5629726344827358472
+    second: Warhog_Death_11
+  - first:
+      213: -521017091848597580
+    second: Warhog_Death_12
+  - first:
+      213: -6592112679117487785
+    second: Warhog_Death_13
+  - first:
+      213: 699304300876432012
+    second: Warhog_Death_14
+  - first:
+      213: -3846419843741532624
+    second: Warhog_Death_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warhog_Death_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 207
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb49272b73a275c0800000000000000
+      internalID: -4219130151559410707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 207
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2078369caeb9cdb0800000000000000
+      internalID: -4771072681758396369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 207
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707baf4ac1d55ad90800000000000000
+      internalID: -7087156060989245689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 207
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae32cc4f180b51b0800000000000000
+      internalID: -5666926775590830425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 143
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1040f844e4c109fa0800000000000000
+      internalID: -5796101597942578175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 143
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8e89e6dd7a14050800000000000000
+      internalID: 5783087966005553367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 143
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdccfeac622e4070800000000000000
+      internalID: 8092443430618975684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 143
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d01e3a4c9bede70800000000000000
+      internalID: 9141948547822849287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 79
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13812afc201618a40800000000000000
+      internalID: 5368678895503677489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 79
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e8407323fdff430800000000000000
+      internalID: 3819016415797874240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 79
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b4a9d98693670c0800000000000000
+      internalID: -4578408849692013819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 79
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f238e987b13fd1b0800000000000000
+      internalID: -5629726344827358472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_12
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 15
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf057627b9f4c8f0800000000000000
+      internalID: -521017091848597580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_13
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 15
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7518ad1e17c1484a0800000000000000
+      internalID: -6592112679117487785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_14
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8284ab7e8d64b900800000000000000
+      internalID: 699304300876432012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Death_15
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 15
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03eb5c40885ce9ac0800000000000000
+      internalID: -3846419843741532624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warhog_Death_0: -4219130151559410707
+      Warhog_Death_1: -4771072681758396369
+      Warhog_Death_10: -4578408849692013819
+      Warhog_Death_11: -5629726344827358472
+      Warhog_Death_12: -521017091848597580
+      Warhog_Death_13: -6592112679117487785
+      Warhog_Death_14: 699304300876432012
+      Warhog_Death_15: -3846419843741532624
+      Warhog_Death_2: -7087156060989245689
+      Warhog_Death_3: -5666926775590830425
+      Warhog_Death_4: -5796101597942578175
+      Warhog_Death_5: 5783087966005553367
+      Warhog_Death_6: 8092443430618975684
+      Warhog_Death_7: 9141948547822849287
+      Warhog_Death_8: 5368678895503677489
+      Warhog_Death_9: 3819016415797874240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

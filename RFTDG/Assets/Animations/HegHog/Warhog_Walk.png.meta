@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 27d9f512c8081e94787bdaa2d2ee4e42
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3095807819157502655
+    second: Warhog_Walk_0
+  - first:
+      213: 3286221601412704998
+    second: Warhog_Walk_1
+  - first:
+      213: 5010784819271362850
+    second: Warhog_Walk_2
+  - first:
+      213: 6277114757833831579
+    second: Warhog_Walk_3
+  - first:
+      213: 5432371592131037480
+    second: Warhog_Walk_4
+  - first:
+      213: -7118842799883453422
+    second: Warhog_Walk_5
+  - first:
+      213: 693926132522651501
+    second: Warhog_Walk_6
+  - first:
+      213: -4794036125824075152
+    second: Warhog_Walk_7
+  - first:
+      213: 6913142261555640748
+    second: Warhog_Walk_8
+  - first:
+      213: 1622486490951713160
+    second: Warhog_Walk_9
+  - first:
+      213: 4841103193494892018
+    second: Warhog_Walk_10
+  - first:
+      213: 7266100103640378030
+    second: Warhog_Walk_11
+  - first:
+      213: 6925487646470361641
+    second: Warhog_Walk_12
+  - first:
+      213: -7534409634163775190
+    second: Warhog_Walk_13
+  - first:
+      213: 3459182243520937789
+    second: Warhog_Walk_14
+  - first:
+      213: -2025516083097888475
+    second: Warhog_Walk_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warhog_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 207
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba72c92fc486fa20800000000000000
+      internalID: 3095807819157502655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 207
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea6b65a2210b9d20800000000000000
+      internalID: 3286221601412704998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 208
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 229e69eae32e98540800000000000000
+      internalID: 5010784819271362850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 208
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b943c0b5d9acc1750800000000000000
+      internalID: 6277114757833831579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 143
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829c4ec5e29a36b40800000000000000
+      internalID: 5432371592131037480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 143
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c7915d03ac43d90800000000000000
+      internalID: -7118842799883453422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 143
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f8f55142251a900800000000000000
+      internalID: 693926132522651501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 143
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07abddf1b89287db0800000000000000
+      internalID: -4794036125824075152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 79
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9b3cd624a60ff50800000000000000
+      internalID: 6913142261555640748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 79
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8810c020eda348610800000000000000
+      internalID: 1622486490951713160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 79
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fda54984bd0f2340800000000000000
+      internalID: 4841103193494892018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 79
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaae9ebfb8f56d460800000000000000
+      internalID: 7266100103640378030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 16
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922d83852564c1060800000000000000
+      internalID: 6925487646470361641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 16
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2923635b56607790800000000000000
+      internalID: -7534409634163775190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 15
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f77664ceb710030800000000000000
+      internalID: 3459182243520937789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warhog_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 15
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5291c14aadbe3e3e0800000000000000
+      internalID: -2025516083097888475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Warhog_Walk_0: 3095807819157502655
+      Warhog_Walk_1: 3286221601412704998
+      Warhog_Walk_10: 4841103193494892018
+      Warhog_Walk_11: 7266100103640378030
+      Warhog_Walk_12: 6925487646470361641
+      Warhog_Walk_13: -7534409634163775190
+      Warhog_Walk_14: 3459182243520937789
+      Warhog_Walk_15: -2025516083097888475
+      Warhog_Walk_2: 5010784819271362850
+      Warhog_Walk_3: 6277114757833831579
+      Warhog_Walk_4: 5432371592131037480
+      Warhog_Walk_5: -7118842799883453422
+      Warhog_Walk_6: 693926132522651501
+      Warhog_Walk_7: -4794036125824075152
+      Warhog_Walk_8: 6913142261555640748
+      Warhog_Walk_9: 1622486490951713160
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
