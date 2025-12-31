@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1096632229623606874}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3465286685962602723, guid: d6997aa6f6f16ff459eaadfa252196e0, type: 3}
+  m_Sprite: {fileID: 4120901811166270815, guid: fa562c800ff1a424e9195315dd886ce4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 2624932140056777507}
   m_Layer: 0
-  m_Name: ArcherTowerlvl5 1
+  m_Name: Training camp lvl 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,6 +136,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Cooldown: 10
-  AmountofUnits: 2
-  LevelManager: {fileID: 0}
+  AmountofUnits: 3
   unit: {fileID: 8693902912695432378, guid: eade904beb345504f94885aba04b469f, type: 3}

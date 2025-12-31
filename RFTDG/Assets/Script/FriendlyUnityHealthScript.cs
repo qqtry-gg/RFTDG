@@ -9,6 +9,8 @@ public class FriendlyUnityHealthScript : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     HealthScript healthScript;
     bool isDying = false;
+    float dmg;
+    float enemydmg;
 
     private void Start()
     {
@@ -18,11 +20,13 @@ public class FriendlyUnityHealthScript : MonoBehaviour
         if ((enemyLayer & (1 << collision.gameObject.layer)) != 0)
         {
             healthScript = collision.gameObject.GetComponent<HealthScript>();
-            if (healthScript.hitpoints > 0)
-            { 
-                unitHitPoints -= healthScript.hitpoints;
+            dmg = unitHitPoints;
+            enemydmg = healthScript.hitpoints;
+            healthScript.TakeDamage(dmg);
+            if (enemydmg > 0)
+            {
+                unitHitPoints -= enemydmg;
             }
-            healthScript.TakeDamage(unitHitPoints);
             if (unitHitPoints <= 0 && !isDying)
             {
                 StartCoroutine(DieAnimation());

@@ -4,6 +4,7 @@ using UnityEngine;
 public class SummonFriendlyUnity : MonoBehaviour
 {
     [SerializeField] float Cooldown;
+    [SerializeField] float NextSpawnCooldown = 0.25f;
     [SerializeField] int AmountofUnits;
     LevelManager LevelManager;
     [SerializeField] GameObject unit;
@@ -29,7 +30,7 @@ public class SummonFriendlyUnity : MonoBehaviour
             for (int i = 0; i < AmountofUnits; i++)
             {
                 Instantiate(unit, LevelManager.startPointU.position, Quaternion.identity);
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(NextSpawnCooldown);
             }
         }
         else
