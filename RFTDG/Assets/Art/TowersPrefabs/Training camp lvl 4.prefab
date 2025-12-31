@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1096632229623606874}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4120901811166270815, guid: fa562c800ff1a424e9195315dd886ce4, type: 3}
+  m_Sprite: {fileID: -5119980863986964875, guid: 24c0a0744e3024a4b92ea53c691cdf45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 2624932140056777507}
   m_Layer: 0
-  m_Name: Training camp lvl 2
+  m_Name: Training camp lvl 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.0233097, y: -2.2888405, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 844898366667190036}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691fe4be33686bc41b6918a4954fa9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Cooldown: 12.5
-  NextSpawnCooldown: 0.3
-  AmountofUnits: 3
-  unit: {fileID: 1147418819773181980, guid: 0524d375cebfca84aa924aa4f823a6ce, type: 3}
+  Cooldown: 32.5
+  NextSpawnCooldown: 0.35
+  AmountofUnits: 1
+  unit: {fileID: 8693902912695432378, guid: 5aa4c48427246d24385d1d17c7670b51, type: 3}
