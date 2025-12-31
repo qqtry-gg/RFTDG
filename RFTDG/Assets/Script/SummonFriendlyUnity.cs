@@ -25,19 +25,22 @@ public class SummonFriendlyUnity : MonoBehaviour
     }
     IEnumerator Summon()
     {
-        if (unit != null && LevelManager != null)
+        while (true)
         {
-            for (int i = 0; i < AmountofUnits; i++)
+            if (unit != null && LevelManager != null)
             {
-                Instantiate(unit, LevelManager.startPointU.position, Quaternion.identity);
-                yield return new WaitForSeconds(NextSpawnCooldown);
+                for (int i = 0; i < AmountofUnits; i++)
+                {
+                    Instantiate(unit, LevelManager.startPointU.position, Quaternion.identity);
+                    yield return new WaitForSeconds(NextSpawnCooldown);
+                }
             }
+            else
+            {
+                Debug.Log("Please don't leave unit Empty");
+            }
+
+            yield return new WaitForSeconds(Cooldown);
         }
-        else
-        {
-            Debug.Log("Please don't leave unit Empty");
-        }
-        yield return new WaitForSeconds(Cooldown);
-        StartCoroutine(Summon());
     }
 }
