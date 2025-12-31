@@ -38,7 +38,6 @@ public class FriendlyUnityHealthScript : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         movementScript.MovementSpeed = 0f;
-        GetComponent<Collider2D>().enabled = false;
         animator.SetTrigger("Die");
         float animationDuration = animator.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(animationDuration); // czas trwania animacji
