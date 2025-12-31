@@ -9,14 +9,21 @@ public class HealthScript : MonoBehaviour
     [SerializeField] SpawnMobsAfterDeath spawnMob;
     [SerializeField] Phase2 secondphase;
     [Header("Attributes")]
-    public float Enemydmg;
     public float hitpoints = 2f;
     public float maxHealth;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
     public void TakeDamage(float damage)
     {
-        hitpoints -= damage;
+        if (damage > 0)
+        {
+            hitpoints -= damage;
+        }
+        else
+        {
+            Debug.Log("Problem w TakeDamage w HealtScript");
+            return;
+        }
         healtBar.fillAmount = hitpoints / maxHealth;
 
         if (secondphase != null && !enemyDied)
@@ -41,15 +48,10 @@ public class HealthScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Enemydmg = maxHealth;
         maxHealth = hitpoints;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void StartPosionEffect(int PoisonHitCounter, float PoisonCooldownBeforeDMG, float PoisonDMG)
     {
         StartCoroutine(Poison(PoisonHitCounter, PoisonCooldownBeforeDMG,PoisonDMG));

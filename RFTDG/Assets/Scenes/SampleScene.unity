@@ -5927,6 +5927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758744753}
   - component: {fileID: 758744752}
+  - component: {fileID: 758744754}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -5958,7 +5959,16 @@ MonoBehaviour:
   - {fileID: 1227196622}
   startPoint: {fileID: 2138483264}
   startPointU: {fileID: 1227196622}
-  PathU: []
+  PathU:
+  - {fileID: 1019335150}
+  - {fileID: 1563173925}
+  - {fileID: 398543597}
+  - {fileID: 1917307706}
+  - {fileID: 1077617190}
+  - {fileID: 2089431811}
+  - {fileID: 1627488342}
+  - {fileID: 768840016}
+  - {fileID: 2138483264}
 --- !u!4 &758744753
 Transform:
   m_ObjectHideFlags: 0
@@ -5974,6 +5984,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &758744754
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758744751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c42d9fb6c09a924aa602b6a31c4feb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &765090527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6966,6 +6998,10 @@ PrefabInstance:
     - target: {fileID: 1096632229623606874, guid: 4e05aae404687e3499a17da36d387fa3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624932140056777507, guid: 4e05aae404687e3499a17da36d387fa3, type: 3}
+      propertyPath: AmountofUnits
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8693902912695432378, guid: 4e05aae404687e3499a17da36d387fa3, type: 3}
       propertyPath: m_Name

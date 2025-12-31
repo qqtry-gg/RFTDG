@@ -9,19 +9,20 @@ public class FriendlyUnityHealthScript : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     HealthScript healthScript;
     bool isDying = false;
-    float dmg;
 
     private void Start()
     {
-        dmg = unitHitPoints;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((enemyLayer & (1 << collision.gameObject.layer)) != 0)
         {
             healthScript = collision.gameObject.GetComponent<HealthScript>();
-            unitHitPoints -= healthScript.Enemydmg;
-            healthScript.TakeDamage(dmg);
+            if (healthScript.hitpoints > 0)
+            { 
+                unitHitPoints -= healthScript.hitpoints;
+            }
+            healthScript.TakeDamage(unitHitPoints);
             if (unitHitPoints <= 0 && !isDying)
             {
                 StartCoroutine(DieAnimation());
@@ -31,6 +32,7 @@ public class FriendlyUnityHealthScript : MonoBehaviour
     }
     IEnumerator DieAnimation()
     {
+        GetComponent<Collider2D>().enabled = false;
         movementScript.MovementSpeed = 0f;
         GetComponent<Collider2D>().enabled = false;
         animator.SetTrigger("Die");
