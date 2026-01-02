@@ -11,6 +11,7 @@ public class HealthScript : MonoBehaviour
     [Header("Attributes")]
     public float hitpoints = 2f;
     public float maxHealth;
+    float dmg;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
     public void TakeDamage(float damage)

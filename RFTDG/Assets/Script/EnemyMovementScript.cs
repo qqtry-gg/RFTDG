@@ -8,6 +8,7 @@ public class EnemyMovementScript : MonoBehaviour
     public float movespeed = 2f;
     [Header("References")]
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameManagerScript game;
 
     private Transform target;
     public int pathIndex = 0;
@@ -25,6 +26,18 @@ public class EnemyMovementScript : MonoBehaviour
 
             if (pathIndex == LevelManager.main.path.Length)
             {
+                if (gameObject.CompareTag("MiniBoss"))
+                {
+                    game.DecreaseHealth(5);
+                }
+                else if (gameObject.CompareTag("Boss"))
+                {
+                    game.DecreaseHealth(50);
+                }
+                else
+                {
+                    game.DecreaseHealth(1);
+                }
                 Destroy(gameObject);
                 return;
             }
@@ -44,6 +57,7 @@ public class EnemyMovementScript : MonoBehaviour
     }
     private void Awake()
     {
+        game = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManagerScript>();
         normalspeed = movespeed;
     }
 

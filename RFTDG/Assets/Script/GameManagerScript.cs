@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    [Header("GameAttributes")]
+    [SerializeField] int health;
+    [Header("Monster")]
     [SerializeField] Transform SpawnPlace;
     [SerializeField] GameObject Skeleton;
     [SerializeField] GameObject Bat;
@@ -34,6 +37,14 @@ public class GameManagerScript : MonoBehaviour
     void Update()
     {
         
+    }
+    public void DecreaseHealth(int amountofHealthToDecrese)
+    {
+        health -= amountofHealthToDecrese;
+        if (health <= 0)
+        {
+            Debug.Log("You lost");
+        }
     }
     public void SpawnSkeleton()
     {

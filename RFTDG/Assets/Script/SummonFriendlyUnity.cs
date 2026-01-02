@@ -29,7 +29,7 @@ public class SummonFriendlyUnity : MonoBehaviour
         {
             if (unit != null && LevelManager != null)
             {
-                for (int i = 0; i < AmountofUnits; i++)
+                for (int i = 0; AmountofUnits > i; i++)
                 {
                     Instantiate(unit, LevelManager.startPointU.position, Quaternion.identity);
                     yield return new WaitForSeconds(NextSpawnCooldown);
