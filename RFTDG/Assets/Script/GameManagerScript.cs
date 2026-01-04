@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
@@ -27,6 +28,8 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject WarHog;
     [SerializeField] GameObject Gollux;
     [SerializeField] GameObject BringerOfDeath;
+
+    bool canSpawn = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,90 +51,101 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnSkeleton()
     {
-        SpawnUnit(Skeleton);
+        SpawnUnit(Skeleton, 0.1f);
     }
     public void SpawnGoblin()
     {
-        SpawnUnit(Goblin);
+        SpawnUnit(Goblin, 0.2f);
     }
     public void SpawnWolf()
     {
-        SpawnUnit(Wolf);
+        SpawnUnit(Wolf, 0.2f);
     }
     public void SpawnOrc()
     {
-        SpawnUnit(Orc);
+        SpawnUnit(Orc, 0.3f);
     }
     public void SpawnBat()
     {
-        SpawnUnit(Bat);
+        SpawnUnit(Bat, 0.1f);
     }
     public void SpawnArmoredSkeleton()
     {
-        SpawnUnit(ArmoredSkeleton);
+        SpawnUnit(ArmoredSkeleton, 0.3f);
     }
     public void SpawnGiantMushroom()
     {
-        SpawnUnit(GiantMushroom);
+        SpawnUnit(GiantMushroom, 0.4f);
     }
     public void SpawnGolem()
     {
-        SpawnUnit(Golem);
+        SpawnUnit(Golem, 0.5f);
     }
     public void SpawnGoldGolem()
     {
-        SpawnUnit(GoldGolem);
+        SpawnUnit(GoldGolem, 0.5f);
     }
     public void SpawnFylingGolem()
     {
-        SpawnUnit(FlyingGolem);
+        SpawnUnit(FlyingGolem, 0.4f);
     }
     public void SpawnReinforcedFylingGolem()
     {
-        SpawnUnit(ReinforcedFylingGolem);
+        SpawnUnit(ReinforcedFylingGolem, 0.6f);
     }
     public void SpawnSlime()
     {
-        SpawnUnit(Slime);
+        SpawnUnit(Slime, 0.2f);
     }
     public void SpawnSlimeBoss()
     {
-        SpawnUnit(SlimeBoss);
+        SpawnUnit(SlimeBoss, 0.5f);
     }
     public void SpawnNecromanta()
     {
-        SpawnUnit(Necromanta);
+        SpawnUnit(Necromanta, 2f);
     }
     public void SpawnGoldBabyDragon()
     {
-        SpawnUnit(GoldBabyDragon);
+        SpawnUnit(GoldBabyDragon, 2f);
     }
     public void SpawnTwinHeadedRedBabyDragon()
     {
-        SpawnUnit(TwinHeadedRedBabyDragon);
+        SpawnUnit(TwinHeadedRedBabyDragon, 2.5f);
     }
     public void SpawnFrostGuardian()
     {
-        SpawnUnit(FrostGuardian);
+        SpawnUnit(FrostGuardian, 5f);
     }
     public void SpawnTheElderMountainsDragon()
     {
-        SpawnUnit(TheElderMountainsDragon);
+        SpawnUnit(TheElderMountainsDragon, 30f);
     }
     public void SpawnWarHog()
     {
-        SpawnUnit(WarHog);
+        SpawnUnit(WarHog, 0.4f);
     }
     public void SpawnGollux()
     {
-        SpawnUnit(Gollux);
+        SpawnUnit(Gollux, 1f);
     }
     public void SpawnBringerOfDeath()
     {
-        SpawnUnit(BringerOfDeath);
+        SpawnUnit(BringerOfDeath, 10f);
     }
-    void SpawnUnit(GameObject enemy)
+    void SpawnUnit(GameObject enemy, float time)
     {
-        Instantiate(enemy, SpawnPlace.position, Quaternion.identity);
+
+        StartCoroutine(Cooldown(enemy, time));
+    }
+    IEnumerator Cooldown(GameObject unit, float time)
+    {
+        if (canSpawn == true)
+        {
+            canSpawn = false;
+            Instantiate(unit, SpawnPlace.position, Quaternion.identity);
+            yield return new WaitForSeconds(time);
+            canSpawn = true;
+        }
     }
 }
