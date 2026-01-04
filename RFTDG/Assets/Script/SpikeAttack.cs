@@ -26,7 +26,7 @@ public class SpikeAttack : MonoBehaviour
         Colliders = Physics2D.OverlapBoxAll(transform.position, new Vector2(2,2),0, EnemyLayer);
         foreach (Collider2D collider in Colliders)
         {
-            collider.GetComponent<HealthScript>().TakeDamage(dmg);
+            if (! (collider.GetComponent<HealthScript>().isFlying)) collider.GetComponent<HealthScript>().TakeDamage(dmg);
         }
         yield return new WaitForSeconds(Cooldown);
         StartCoroutine(SpikePop());

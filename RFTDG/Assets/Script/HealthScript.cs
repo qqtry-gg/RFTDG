@@ -9,6 +9,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField] SpawnMobsAfterDeath spawnMob;
     [SerializeField] Phase2 secondphase;
     [Header("Attributes")]
+    public bool isFlying = false;
     public float hitpoints = 2f;
     public float maxHealth;
     float dmg;

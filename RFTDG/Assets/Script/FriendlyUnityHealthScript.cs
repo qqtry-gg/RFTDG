@@ -17,7 +17,7 @@ public class FriendlyUnityHealthScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((enemyLayer & (1 << collision.gameObject.layer)) != 0)
+        if ((enemyLayer & (1 << collision.gameObject.layer)) != 0 && !(collision.gameObject.GetComponent<HealthScript>().isFlying))
         {
             healthScript = collision.gameObject.GetComponent<HealthScript>();
             dmg = unitHitPoints;

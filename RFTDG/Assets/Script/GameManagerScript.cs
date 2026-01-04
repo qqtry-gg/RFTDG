@@ -48,86 +48,90 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnSkeleton()
     {
-        Instantiate(Skeleton, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Skeleton);
     }
     public void SpawnGoblin()
     {
-        Instantiate(Goblin, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Goblin);
     }
     public void SpawnWolf()
     {
-        Instantiate(Wolf, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Wolf);
     }
     public void SpawnOrc()
     {
-        Instantiate(Orc, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Orc);
     }
     public void SpawnBat()
     {
-        Instantiate(Bat, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Bat);
     }
     public void SpawnArmoredSkeleton()
     {
-        Instantiate(ArmoredSkeleton, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(ArmoredSkeleton);
     }
     public void SpawnGiantMushroom()
     {
-        Instantiate(GiantMushroom, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(GiantMushroom);
     }
     public void SpawnGolem()
     {
-        Instantiate(Golem, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Golem);
     }
     public void SpawnGoldGolem()
     {
-        Instantiate(GoldGolem, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(GoldGolem);
     }
     public void SpawnFylingGolem()
     {
-        Instantiate(FlyingGolem, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(FlyingGolem);
     }
     public void SpawnReinforcedFylingGolem()
     {
-        Instantiate(ReinforcedFylingGolem, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(ReinforcedFylingGolem);
     }
     public void SpawnSlime()
     {
-        Instantiate(Slime, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Slime);
     }
     public void SpawnSlimeBoss()
     {
-        Instantiate(SlimeBoss, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(SlimeBoss);
     }
     public void SpawnNecromanta()
     {
-        Instantiate(Necromanta, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Necromanta);
     }
     public void SpawnGoldBabyDragon()
     {
-        Instantiate(GoldBabyDragon, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(GoldBabyDragon);
     }
     public void SpawnTwinHeadedRedBabyDragon()
     {
-        Instantiate(TwinHeadedRedBabyDragon, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(TwinHeadedRedBabyDragon);
     }
     public void SpawnFrostGuardian()
     {
-        Instantiate(FrostGuardian, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(FrostGuardian);
     }
     public void SpawnTheElderMountainsDragon()
     {
-        Instantiate(TheElderMountainsDragon, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(TheElderMountainsDragon);
     }
     public void SpawnWarHog()
     {
-        Instantiate(WarHog, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(WarHog);
     }
     public void SpawnGollux()
     {
-        Instantiate(Gollux, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(Gollux);
     }
     public void SpawnBringerOfDeath()
     {
-        Instantiate(BringerOfDeath, SpawnPlace.position, Quaternion.identity);
+        SpawnUnit(BringerOfDeath);
+    }
+    void SpawnUnit(GameObject enemy)
+    {
+        Instantiate(enemy, SpawnPlace.position, Quaternion.identity);
     }
 }
