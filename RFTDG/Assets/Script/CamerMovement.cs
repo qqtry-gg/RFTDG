@@ -23,8 +23,8 @@ public class CamerMovement : MonoBehaviour
         Vector3 CurrentPosition = new Vector3(camera.transform.position.x, camera.transform.position.y, camera.transform.position.z);
 
 
-        CurrentPosition.y = camera.transform.position.y + (movementVertical / 20);
-        CurrentPosition.x = camera.transform.position.x + (movementHorizontal / 20);
+        CurrentPosition.y = camera.transform.position.y + (movementVertical / 20 * Time.deltaTime);
+        CurrentPosition.x = camera.transform.position.x + (movementHorizontal / 20 * Time.deltaTime);
 
 
         CurrentPosition.y = Mathf.Clamp(CurrentPosition.y, -6f, 6f);
