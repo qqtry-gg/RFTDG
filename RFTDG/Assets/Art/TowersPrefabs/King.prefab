@@ -166,7 +166,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.25}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0.45999998}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.6, y: 1.11}
     newSize: {x: 0.2, y: 0.35}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a176b6fb95617b64a8f71a617ec353d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  unitHitPoints: 550
+  unitHitPoints: 250
   movementScript: {fileID: 5833453748996100848}
   animator: {fileID: 3167756325284698454}
   enemyLayer:

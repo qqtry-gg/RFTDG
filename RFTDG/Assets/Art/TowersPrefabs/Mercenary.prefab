@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 2623014881040739299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a176b6fb95617b64a8f71a617ec353d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  unitHitPoints: 20
+  unitHitPoints: 15
   movementScript: {fileID: 7098816602504383543}
   animator: {fileID: 6469973945255192495}
   enemyLayer:

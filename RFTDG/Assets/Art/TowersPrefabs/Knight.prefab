@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a176b6fb95617b64a8f71a617ec353d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  unitHitPoints: 60
+  unitHitPoints: 50
   movementScript: {fileID: 5833453748996100848}
   animator: {fileID: 3167756325284698454}
   enemyLayer:
