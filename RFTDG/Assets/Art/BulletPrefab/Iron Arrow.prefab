@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 4271062382861938553}
   - component: {fileID: 6177183212538859575}
   - component: {fileID: 4780077688096190272}
-  - component: {fileID: 5841490313732954382}
-  - component: {fileID: 8784873118605106744}
   m_Layer: 7
-  m_Name: Upgraded FireBall
+  m_Name: Iron Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3907389932859765376}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000014901161, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4128536956589979879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84,12 +82,12 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2917000182891882972, guid: 988450baabb98c848825ba31515e7b83, type: 3}
-  m_Color: {r: 0.9622642, g: 0.5582948, b: 0.5582948, a: 1}
+  m_Sprite: {fileID: -855298285791758126, guid: 0b63926bc66572e4bb24ed5c51fe6778, type: 3}
+  m_Color: {r: 0.6509434, g: 0.38995194, b: 0.42959723, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.19, y: 0.32}
+  m_Size: {x: 0.03, y: 0.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -133,13 +131,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.19, y: 0.32}
-    newSize: {x: 0.19, y: 0.32}
+    oldSize: {x: 0.03, y: 0.14}
+    newSize: {x: 0.03, y: 0.14}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.1, y: 0.14}
+  m_Size: {x: 0.03, y: 0.14}
   m_EdgeRadius: 0
 --- !u!50 &6177183212538859575
 Rigidbody2D:
@@ -181,46 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 6177183212538859575}
-  Bulletspeed: 8
+  Bulletspeed: 6
   rotationSpeed: 30
-  dmg: 8
---- !u!114 &5841490313732954382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3907389932859765376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd5792d4ba357db4f81333a7c555d907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  explosionDMG: 4
-  ExplosionRadius: 2.15
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  explosionPrefab: {fileID: 4965741807716888871, guid: e547ead2a4465c84a9b0fecf4616acbb, type: 3}
---- !u!95 &8784873118605106744
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3907389932859765376}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1652a0338ee74ac40984a5b7bcadecbf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  dmg: 2

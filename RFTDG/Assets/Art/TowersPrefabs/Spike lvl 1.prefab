@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   animator: {fileID: 4737788428177799193}
   dmg: 5
-  Cooldown: 9
+  Cooldown: 6
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 64

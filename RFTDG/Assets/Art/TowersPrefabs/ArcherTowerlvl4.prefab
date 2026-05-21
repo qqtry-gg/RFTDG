@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3486213973332830821}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.20047045, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 5434265117279520973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.45047045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 6235939461650145811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.30652952, z: 0}
+  m_LocalPosition: {x: 0, y: 0.507, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -289,9 +289,11 @@ MonoBehaviour:
     m_Bits: 64
   CurrentSprite: {fileID: 4959455417842473758}
   ObjectToRotate: {fileID: 9172315620754369248}
-  BulletPrefab: {fileID: 3907389932859765376, guid: 761b604e9b1397f4d80a20e1deff1f48, type: 3}
+  BulletPrefab: {fileID: 3907389932859765376, guid: 670491ca07beaef43a3601a562ec1c0b, type: 3}
   FiringPoint: {fileID: 9200713561974308557}
   targetingRange: 6.5
   RotationSpeed: 60
-  bps: 1.2
+  bps: 2.1
   timeBeforeAnimation: 0.3
+  IsRotating: 0
+  HasAnimations: 1

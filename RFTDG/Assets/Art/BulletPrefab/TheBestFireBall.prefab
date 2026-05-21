@@ -183,7 +183,7 @@ MonoBehaviour:
   rb: {fileID: 6177183212538859575}
   Bulletspeed: 11
   rotationSpeed: 30
-  dmg: 40
+  dmg: 90
 --- !u!114 &5841490313732954382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5792d4ba357db4f81333a7c555d907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  explosionDMG: 13
-  ExplosionRadius: 2.5
+  explosionDMG: 25
+  ExplosionRadius: 4
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3486213973332830821}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22847056, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 5434265117279520973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.47847056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 6235939461650145811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5565295, z: 0}
+  m_LocalPosition: {x: 0, y: 0.785, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -293,5 +293,7 @@ MonoBehaviour:
   FiringPoint: {fileID: 9200713561974308557}
   targetingRange: 6
   RotationSpeed: 60
-  bps: 1
+  bps: 1.7
   timeBeforeAnimation: 0.3
+  IsRotating: 0
+  HasAnimations: 1
