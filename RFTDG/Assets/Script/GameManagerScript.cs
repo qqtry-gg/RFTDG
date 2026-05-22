@@ -31,6 +31,9 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject WarHog;
     [SerializeField] GameObject Gollux;
     [SerializeField] GameObject BringerOfDeath;
+    [SerializeField] GameObject FlyingSkull;
+    [SerializeField] GameObject Healer;
+    [SerializeField] GameObject Bandit;
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
@@ -75,11 +78,11 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnWolf()
     {
-        SpawnUnit(Wolf, 0.2f,10);
+        SpawnUnit(Wolf, 0.3f,10);
     }
     public void SpawnOrc()
     {
-        SpawnUnit(Orc, 0.3f,20);
+        SpawnUnit(Orc, 0.4f,20);
     }
     public void SpawnBat()
     {
@@ -87,51 +90,51 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnArmoredSkeleton()
     {
-        SpawnUnit(ArmoredSkeleton, 0.3f,30);
+        SpawnUnit(ArmoredSkeleton, 0.45f,30);
     }
     public void SpawnGiantMushroom()
     {
-        SpawnUnit(GiantMushroom, 0.4f,75);
+        SpawnUnit(GiantMushroom, 0.6f,75);
     }
     public void SpawnGolem()
     {
-        SpawnUnit(Golem, 0.5f,125);
+        SpawnUnit(Golem, 1f,125);
     }
     public void SpawnGoldGolem()
     {
-        SpawnUnit(GoldGolem, 0.5f,150);
+        SpawnUnit(GoldGolem, 1.25f,150);
     }
     public void SpawnFylingGolem()
     {
-        SpawnUnit(FlyingGolem, 0.4f,85);
+        SpawnUnit(FlyingGolem, 0.75f,85);
     }
     public void SpawnReinforcedFylingGolem()
     {
-        SpawnUnit(ReinforcedFylingGolem, 0.6f,250);
+        SpawnUnit(ReinforcedFylingGolem, 1.5f,250);
     }
     public void SpawnSlime()
     {
-        SpawnUnit(Slime, 0.2f,3);
+        SpawnUnit(Slime, 0.3f,3);
     }
     public void SpawnSlimeBoss()
     {
-        SpawnUnit(SlimeBoss, 0.5f,50);
+        SpawnUnit(SlimeBoss, 0.75f,50);
     }
     public void SpawnNecromanta()
     {
-        SpawnUnit(Necromanta, 2f,350);
+        SpawnUnit(Necromanta, 3f,350);
     }
     public void SpawnGoldBabyDragon()
     {
-        SpawnUnit(GoldBabyDragon, 2f,750);
+        SpawnUnit(GoldBabyDragon, 4f,750);
     }
     public void SpawnTwinHeadedRedBabyDragon()
     {
-        SpawnUnit(TwinHeadedRedBabyDragon, 2.5f,1000);
+        SpawnUnit(TwinHeadedRedBabyDragon, 4.5f,1000);
     }
     public void SpawnFrostGuardian()
     {
-        SpawnUnit(FrostGuardian, 5f,1750);
+        SpawnUnit(FrostGuardian, 7.5f,1750);
     }
     public void SpawnTheElderMountainsDragon()
     {
@@ -139,15 +142,27 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnWarHog()
     {
-        SpawnUnit(WarHog, 0.4f,50);
+        SpawnUnit(WarHog, 0.8f,50);
     }
     public void SpawnGollux()
     {
-        SpawnUnit(Gollux, 1f,400);
+        SpawnUnit(Gollux, 3.5f,400);
     }
     public void SpawnBringerOfDeath()
     {
-        SpawnUnit(BringerOfDeath, 10f,2500);
+        SpawnUnit(BringerOfDeath, 12.5f,2500);
+    }
+    public void SpawnFlyingSkull()
+    {
+        SpawnUnit(FlyingSkull, 0.25f, 8);
+    }
+    public void SpawnHealer()
+    {
+        SpawnUnit(Healer, 2.25f, 100);
+    }
+    public void SpawnBandit()
+    {
+        SpawnUnit(Bandit, 0.5f, 35);
     }
     void SpawnUnit(GameObject enemy, float time, int cost)
     {

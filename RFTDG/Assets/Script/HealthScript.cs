@@ -46,6 +46,14 @@ public class HealthScript : MonoBehaviour
             StartCoroutine(DestoryAfterAnimation());
         }
     }
+    public void Heal(float healAmount)
+    {
+        if (hitpoints + healAmount < maxHealth) hitpoints += healAmount;
+        else
+        {
+            hitpoints = maxHealth;
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
