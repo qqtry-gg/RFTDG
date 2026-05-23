@@ -30,6 +30,11 @@ public class FriendlyUnityMovementScript : MonoBehaviour
         {
             count++;
         }
+        if (count >= levelManager.PathU.Length)
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (transform.position.x - levelManager.PathU[count].transform.position.x > 0)
         {
             spriteRenderer.flipX = true;
