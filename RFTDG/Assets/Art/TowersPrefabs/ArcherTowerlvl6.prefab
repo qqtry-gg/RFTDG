@@ -222,7 +222,7 @@ Animator:
   m_GameObject: {fileID: 6235939461650145811}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 591da6dbbf533a44fbebd478148355cc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1cbca128909b9054ab78daa7ee48ccbd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 1191603342004194914}
   m_Layer: 0
-  m_Name: ArcherTowerlvl5
+  m_Name: ArcherTowerlvl6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,9 +291,9 @@ MonoBehaviour:
   ObjectToRotate: {fileID: 9172315620754369248}
   BulletPrefab: {fileID: 3907389932859765376, guid: 670491ca07beaef43a3601a562ec1c0b, type: 3}
   FiringPoint: {fileID: 9200713561974308557}
-  targetingRange: 7
+  targetingRange: 8
   RotationSpeed: 60
-  bps: 2.9
+  bps: 6
   timeBeforeAnimation: 0.3
   IsRotating: 0
   HasAnimations: 1
