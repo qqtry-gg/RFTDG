@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 2624932140056777507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Training camp lvl 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844898366667190036}
   - component: {fileID: 3816145078552489411}
+  - component: {fileID: 1613509157256114139}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3486213973332830821}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 0.08170915, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1096632229623606874}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4120901811166270815, guid: fa562c800ff1a424e9195315dd886ce4, type: 3}
+  m_Sprite: {fileID: -4227435001158437254, guid: a6fc225a4822a16448e8183c397bd499, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,6 +91,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1613509157256114139
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486213973332830821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5454f549e46dbac419a6f1f809c40ee2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8693902912695432378
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,10 +122,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1096632229623606874}
-  - component: {fileID: 2624932140056777507}
+  - component: {fileID: -3017535052202181980}
   m_Layer: 8
-  m_Name: Training camp lvl 2
-  m_TagString: Untagged
+  m_Name: Obelisc
+  m_TagString: Obelisc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,14 +139,14 @@ Transform:
   m_GameObject: {fileID: 8693902912695432378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0233097, y: -2.2888405, z: 0}
+  m_LocalPosition: {x: -7.538423, y: 0.66829085, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 844898366667190036}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2624932140056777507
+--- !u!114 &-3017535052202181980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,10 +155,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8693902912695432378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691fe4be33686bc41b6918a4954fa9a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 86ca04e450599e84ab34593392f78c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Cooldown: 12.5
-  NextSpawnCooldown: 0.3
-  AmountofUnits: 3
-  unit: {fileID: 1147418819773181980, guid: 0524d375cebfca84aa924aa4f823a6ce, type: 3}
+  radius: 4.5
+  towerLayer:
+    serializedVersion: 2
+    m_Bits: 256

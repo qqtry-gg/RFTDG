@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1096632229623606874}
   - component: {fileID: 3389726696453218949}
   - component: {fileID: 8387216226621478600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slomo Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}

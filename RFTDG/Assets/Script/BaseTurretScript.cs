@@ -17,14 +17,15 @@ public class BaseTurretScript : MonoBehaviour
     [SerializeField] Transform FiringPoint;
 
     [Header("Atributes")]
-    [SerializeField] float targetingRange = 5f;
+    public float targetingRange = 5f;
     [SerializeField] float RotationSpeed = 5f;
-    [SerializeField] float bps = 0.8f; //bullets per second
+    public float bps = 0.8f; //bullets per second
     [SerializeField] float timeBeforeAnimation = 0.3f;
     [SerializeField] bool IsRotating = false;
     [SerializeField] bool HasAnimations = true;
     private Transform target;
     private float TimeUntilFire;
+    public bool isBoosted = false;
 
     private void Update()
     {

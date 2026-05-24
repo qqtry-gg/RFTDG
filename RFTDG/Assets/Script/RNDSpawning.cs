@@ -22,6 +22,7 @@ public class RNDSpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.B) && spawns.Count > 0)
         {
             int randomSpawnInt = UnityEngine.Random.Range(0, spawns.Count);
