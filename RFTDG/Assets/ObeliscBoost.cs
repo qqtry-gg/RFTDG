@@ -26,7 +26,6 @@ public class ObeliscBoost : MonoBehaviour
     public void TowersInRange()
     {
         circleColliders = Physics2D.OverlapCircleAll(transform.position, radius, towerLayer);
-        Debug.Log(circleColliders.Length);
         if (circleColliders.Length > 0)
         {
             foreach(Collider2D circleCollider in circleColliders)
