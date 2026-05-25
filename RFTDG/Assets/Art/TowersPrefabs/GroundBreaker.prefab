@@ -273,7 +273,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3.5
+  m_Radius: 4.5
 --- !u!114 &5240733847455118608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  radius: 3.5
-  attackSpeed: 2.5
-  damage: 4
+  radius: 4.5
+  attackSpeed: 2.75
+  damage: 3
   animator: {fileID: 0}
