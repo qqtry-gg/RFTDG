@@ -35,9 +35,10 @@ public class Phase2 : MonoBehaviour
         animator.SetBool("Transformation", true);
         HealthScript.hitpoints += HealthScript.maxHealth / 2;
         yield return new WaitForSeconds(secondsTransformationCooldown);
+        EnemyMovementScript.movespeed = EnemyMovementScript.normalspeed;
         EnemyMovementScript.normalspeed = EnemyMovementScript.normalspeed * SpeedIncreaseTimes;
+        EnemyMovementScript.movespeed = EnemyMovementScript.normalspeed * SpeedIncreaseTimes;
         animator.SetBool("Transformation", false);
         GetComponent<SpriteRenderer>().material.color = Color.darkRed;
-        EnemyMovementScript.movespeed = EnemyMovementScript.normalspeed * SpeedIncreaseTimes;
     }
 }

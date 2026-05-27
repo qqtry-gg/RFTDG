@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5792d4ba357db4f81333a7c555d907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  explosionDMG: 25
+  explosionDMG: 20
   ExplosionRadius: 4
   enemyLayer:
     serializedVersion: 2
