@@ -23,7 +23,6 @@ public class HealthScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Problem w TakeDamage w HealtScript");
             return;
         }
         healtBar.fillAmount = hitpoints / maxHealth;
