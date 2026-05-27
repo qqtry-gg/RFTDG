@@ -7,6 +7,7 @@ TagManager:
   - MiniBoss
   - Boss
   - Obelisc
+  - FreezeTower
   layers:
   - Default
   - TransparentFX
