@@ -39,7 +39,7 @@ public class EndlessModeManager : MonoBehaviour
             waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
             RNDSpawning.SpawnTower();
             gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
-            gameManagerScript.health++;
+            gameManagerScript.health = 1;
         }
         if (gameManagerScript.cash < 2)
         {

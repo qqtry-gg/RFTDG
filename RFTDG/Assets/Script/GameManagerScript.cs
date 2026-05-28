@@ -170,7 +170,6 @@ public class GameManagerScript : MonoBehaviour
     }
     void SpawnUnit(GameObject enemy, float time, int cost)
     {
-        enemies.Add(enemy);
         StartCoroutine(Cooldown(enemy, time, cost));
     }
     IEnumerator Cooldown(GameObject unit, float time, int cost)
@@ -181,7 +180,9 @@ public class GameManagerScript : MonoBehaviour
             cash -= cost;
             canSpawn = false;
 
-            Instantiate(unit, SpawnPlace.position, Quaternion.identity);
+            GameObject spawnedEnemy = Instantiate(unit, SpawnPlace.position, Quaternion.identity);
+            enemies.Add(spawnedEnemy);
+            
             yield return new WaitForSeconds(time);
             canSpawn = true;
         }
