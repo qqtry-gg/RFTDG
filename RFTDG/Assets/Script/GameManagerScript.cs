@@ -5,8 +5,8 @@ using TMPro;
 public class GameManagerScript : MonoBehaviour
 {
     [Header("GameAttributes")]
-    [SerializeField] int health;
-    [SerializeField] int cash;
+    public int health;
+    public int cash;
     [SerializeField] float cooldown;
     [Header("Monster")]
     [SerializeField] Transform SpawnPlace;

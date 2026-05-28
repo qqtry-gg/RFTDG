@@ -14,16 +14,9 @@ public class RNDSpawning : MonoBehaviour
     GameObject currentTower;
     GameObject currentSpikeTower;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void SpawnTower()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.B) && spawns.Count > 0)
+        if (spawns.Count > 0)
         {
             int randomSpawnInt = UnityEngine.Random.Range(0, spawns.Count);
             currentSpawn = spawns[randomSpawnInt];
@@ -34,7 +27,10 @@ public class RNDSpawning : MonoBehaviour
             Instantiate(currentTower, currentSpawn.transform.position, Quaternion.identity);
             spawns.Remove(currentSpawn);
         }
-        if (Input.GetKeyDown(KeyCode.V) && spikeSpawns.Count > 0)
+    }
+    public void SpawnSpike()
+    {
+        if (spikeSpawns.Count > 0)
         {
             int randomSpawnInt2 = UnityEngine.Random.Range(0, spikeSpawns.Count);
             currentSpawnSpike = spikeSpawns[randomSpawnInt2];
