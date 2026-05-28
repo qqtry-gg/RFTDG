@@ -3,6 +3,8 @@ using UnityEngine;
 public class CamerMovement : MonoBehaviour
 {
     [SerializeField] Camera camera;
+    [SerializeField] Vector2 minimalDistane;
+    [SerializeField] Vector2 maximumDistane;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,8 +29,8 @@ public class CamerMovement : MonoBehaviour
         CurrentPosition.x = camera.transform.position.x + (movementHorizontal * 4 * Time.deltaTime);
 
 
-        CurrentPosition.y = Mathf.Clamp(CurrentPosition.y, -6f, 6f);
-        CurrentPosition.x = Mathf.Clamp(CurrentPosition.x, -10f, 10f);
+        CurrentPosition.y = Mathf.Clamp(CurrentPosition.y, minimalDistane.y,maximumDistane.y);
+        CurrentPosition.x = Mathf.Clamp(CurrentPosition.x, minimalDistane.x, maximumDistane.x);
 
         camera.transform.position = CurrentPosition;
 
