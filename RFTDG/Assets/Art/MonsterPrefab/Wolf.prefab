@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 4473573282585055275, guid: a4a8839f42bb73d438ddcf766fbf88ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -193,6 +193,7 @@ MonoBehaviour:
   healtBar: {fileID: 1019849126802974063}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
+  isFlying: 0
   hitpoints: 5
   maxHealth: 0
 --- !u!95 &-3509567341143660152

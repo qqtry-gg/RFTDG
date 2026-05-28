@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
-  m_SortingOrder: 100
+  m_SortingOrder: 10
   m_Sprite: {fileID: 8681008312180965034, guid: 0e6db740443ccf445b568f32f88f4eac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
   movespeed: 0.5
   rb: {fileID: 4039901463788289763}
+  game: {fileID: 0}
   pathIndex: 0
   isSpriteRotated: 1
   normalspeed: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
   healtBar: {fileID: 6294703542443137791}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
+  isFlying: 0
   hitpoints: 2250
   maxHealth: 0
 --- !u!95 &724672291155199720

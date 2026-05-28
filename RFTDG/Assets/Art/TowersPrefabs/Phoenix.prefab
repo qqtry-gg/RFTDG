@@ -110,7 +110,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 962851689
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -3580415953712972241, guid: f4ced08654da29d4fb31952cedb03a94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -208,6 +208,7 @@ MonoBehaviour:
   timeBeforeAnimation: 0.3
   IsRotating: 0
   HasAnimations: 1
+  isBoosted: 0
 --- !u!114 &4232782476703943047
 MonoBehaviour:
   m_ObjectHideFlags: 0
