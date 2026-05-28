@@ -19,6 +19,10 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void EndlessPlay()
+    {
+        SceneManager.LoadScene(4);
+    }
     public void BackScene()
     {
         SceneManager.LoadScene(0);
