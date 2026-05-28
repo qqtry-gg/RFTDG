@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using NUnit.Framework;
+using System.Collections.Generic;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -37,8 +39,10 @@ public class GameManagerScript : MonoBehaviour
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
+    
 
     bool canSpawn = true;
+    public List<GameObject> enemies = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -166,7 +170,7 @@ public class GameManagerScript : MonoBehaviour
     }
     void SpawnUnit(GameObject enemy, float time, int cost)
     {
-
+        enemies.Add(enemy);
         StartCoroutine(Cooldown(enemy, time, cost));
     }
     IEnumerator Cooldown(GameObject unit, float time, int cost)

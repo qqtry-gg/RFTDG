@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class EndlessModeManager : MonoBehaviour
     {
         wave++;
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
-        gameManagerScript.cash = 20;
+        gameManagerScript.cash = 30;
         gameManagerScript.health = 1;
         RNDSpawning.SpawnTower();
     }
@@ -23,12 +24,21 @@ public class EndlessModeManager : MonoBehaviour
     {
         if (gameManagerScript.health <= 0)
         {
-            
+            foreach (GameObject enemy in gameManagerScript.enemies)
+            {
+                if (enemy == null)
+                { continue; }
+                else
+                {
+                    Destroy(enemy.gameObject);
+                }
+                Debug.Log("You won this round");
+            }
             gameManagerScript.cash = 0;
             wave++;
             waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
             RNDSpawning.SpawnTower();
-            gameManagerScript.cash = 20 + (cashIncreaseEarning * wave);
+            gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
             gameManagerScript.health++;
         }
         if (gameManagerScript.cash < 2)
