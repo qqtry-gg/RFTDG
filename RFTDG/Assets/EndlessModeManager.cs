@@ -22,7 +22,7 @@ public class EndlessModeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManagerScript.health <= 0 && wave <= 200)
+        if (gameManagerScript.health <= 0 && wave >= 200)
         {
             foreach (GameObject enemy in gameManagerScript.enemies)
             {
