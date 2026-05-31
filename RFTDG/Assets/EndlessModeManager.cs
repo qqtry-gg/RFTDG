@@ -59,7 +59,7 @@ public class EndlessModeManager : MonoBehaviour
             {
                 cashIncreaseEarning = 70;
             }
-            else if (wave >= 50)
+            else if (wave >= 40)
             {
                 cashIncreaseEarning = 50;
             }
