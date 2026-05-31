@@ -7,12 +7,12 @@ public class EndlessModeManager : MonoBehaviour
     [SerializeField] GameManagerScript gameManagerScript;
     [SerializeField] RNDSpawning RNDSpawning;
     [SerializeField] GameObject waveTMP;
-    int wave = 0;
+    int wave;
     [SerializeField] int cashIncreaseEarning = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        wave++;
+        wave = 1;
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
         gameManagerScript.cash = 30;
         gameManagerScript.health = 1;
@@ -22,75 +22,78 @@ public class EndlessModeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManagerScript.health <= 0 && wave >= 200)
+        if (wave <= 200)
         {
-            foreach (GameObject enemy in gameManagerScript.enemies)
+            if (gameManagerScript.health <= 0)
             {
-                if (enemy == null)
-                { continue; }
-                else
+                foreach (GameObject enemy in gameManagerScript.enemies)
                 {
-                    Destroy(enemy.gameObject);
-                }
-                Debug.Log("You won this round");
-            }
-            gameManagerScript.cash = 0;
-            wave++;
-            waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
-            if (!(wave >= 196))
-            {
-                if (wave >= 20 && wave % 5 == 0)
-                {
-                    RNDSpawning.SpawnSpike();
-
-                }
-                else
-                {
-                    if (wave <= 10)
+                    if (enemy == null)
+                    { continue; }
+                    else
                     {
-                        RNDSpawning.SpawnBadTower();
+                        Destroy(enemy.gameObject);
                     }
-                    else if (wave <= 40)
+                    Debug.Log("You won this round");
+                }
+                gameManagerScript.cash = 0;
+                wave++;
+                waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
+                if (!(wave >= 196))
+                {
+                    if (wave >= 20 && wave % 5 == 0)
                     {
-                        RNDSpawning.SpawnMediumTower();
+                        RNDSpawning.SpawnSpike();
+
                     }
                     else
                     {
-                        RNDSpawning.SpawnGoodTower();
+                        if (wave <= 10)
+                        {
+                            RNDSpawning.SpawnBadTower();
+                        }
+                        else if (wave <= 40)
+                        {
+                            RNDSpawning.SpawnMediumTower();
+                        }
+                        else
+                        {
+                            RNDSpawning.SpawnGoodTower();
+                        }
                     }
                 }
-            }
 
 
-            if (wave >= 150)
-            {
-                cashIncreaseEarning = 100;
-            }
-            else if (wave >= 100)
-            {
-                cashIncreaseEarning = 70;
-            }
-            else if (wave >= 40)
-            {
-                cashIncreaseEarning = 50;
-            }
-            else if (wave >= 20)
-            {
-                cashIncreaseEarning = 30;
-            }
-            else if (wave >= 5)
-            {
-                cashIncreaseEarning = 20;
-            }
-            else
-            {
-                cashIncreaseEarning = 10;
-            }
-            gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
-            gameManagerScript.health = 1;
-            if (wave >= 196)
-            {
-                gameManagerScript.cash = 30 + (cashIncreaseEarning * wave) - wave * 20;
+                if (wave >= 150)
+                {
+                    cashIncreaseEarning = 100;
+                }
+                else if (wave >= 100)
+                {
+                    cashIncreaseEarning = 70;
+                }
+                else if (wave >= 40)
+                {
+                    cashIncreaseEarning = 50;
+                }
+                else if (wave >= 20)
+                {
+                    cashIncreaseEarning = 30;
+                }
+                else if (wave >= 5)
+                {
+                    cashIncreaseEarning = 20;
+                }
+                else
+                {
+                    cashIncreaseEarning = 10;
+                }
+                gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
+                gameManagerScript.health = 1;
+                if (wave >= 196)
+                {
+                    gameManagerScript.cash = 30 + (cashIncreaseEarning * wave) - wave * 20;
+                }
             }
         }
         else
