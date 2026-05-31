@@ -7,22 +7,52 @@ public class RNDSpawning : MonoBehaviour
 {
     [SerializeField] List<Transform> spawns = new List<Transform>();
     [SerializeField] List<Transform> spikeSpawns = new List<Transform>();
-    [SerializeField] GameObject[] towers;
+    [SerializeField] GameObject[] badTowers;
+    [SerializeField] GameObject[] mediumTowers;
+    [SerializeField] GameObject[] goodTowers;
     [SerializeField] GameObject[] spikeTowers;
     Transform currentSpawn;
     Transform currentSpawnSpike;
     GameObject currentTower;
     GameObject currentSpikeTower;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void SpawnTower()
+    public void SpawnBadTower()
     {
         if (spawns.Count > 0)
         {
             int randomSpawnInt = UnityEngine.Random.Range(0, spawns.Count);
             currentSpawn = spawns[randomSpawnInt];
 
-            int randomTowerInt = UnityEngine.Random.Range(0, towers.Length);
-            currentTower = towers[randomTowerInt];
+            int randomTowerInt = UnityEngine.Random.Range(0, badTowers.Length);
+            currentTower = badTowers[randomTowerInt];
+
+            Instantiate(currentTower, currentSpawn.transform.position, Quaternion.identity);
+            spawns.Remove(currentSpawn);
+        }
+    }
+    public void SpawnMediumTower()
+    {
+        if (spawns.Count > 0)
+        {
+            int randomSpawnInt = UnityEngine.Random.Range(0, spawns.Count);
+            currentSpawn = spawns[randomSpawnInt];
+
+            int randomTowerInt = UnityEngine.Random.Range(0, mediumTowers.Length);
+            currentTower = mediumTowers[randomTowerInt];
+
+            Instantiate(currentTower, currentSpawn.transform.position, Quaternion.identity);
+            spawns.Remove(currentSpawn);
+        }
+    }
+    public void SpawnGoodTower()
+    {
+        if (spawns.Count > 0)
+        {
+            int randomSpawnInt = UnityEngine.Random.Range(0, spawns.Count);
+            currentSpawn = spawns[randomSpawnInt];
+
+            int randomTowerInt = UnityEngine.Random.Range(0, goodTowers.Length);
+            currentTower = goodTowers[randomTowerInt];
 
             Instantiate(currentTower, currentSpawn.transform.position, Quaternion.identity);
             spawns.Remove(currentSpawn);

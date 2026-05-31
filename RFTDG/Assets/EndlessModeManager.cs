@@ -16,7 +16,7 @@ public class EndlessModeManager : MonoBehaviour
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
         gameManagerScript.cash = 30;
         gameManagerScript.health = 1;
-        RNDSpawning.SpawnTower();
+        RNDSpawning.SpawnBadTower();
     }
 
     // Update is called once per frame
@@ -37,11 +37,48 @@ public class EndlessModeManager : MonoBehaviour
             gameManagerScript.cash = 0;
             wave++;
             waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
-            RNDSpawning.SpawnTower();
+            if (wave <= 10)
+            {
+                RNDSpawning.SpawnBadTower();
+            }
+            else if (wave <= 40)
+            {
+                RNDSpawning.SpawnMediumTower();
+            }
+            else
+            {
+                RNDSpawning.SpawnGoodTower();
+            }
+
+
+            if (wave >= 125)
+            {
+                cashIncreaseEarning = 100;
+            }
+            else if (wave >= 100)
+            {
+                cashIncreaseEarning = 70;
+            }
+            else if (wave >= 50)
+            {
+                cashIncreaseEarning = 50;
+            }
+            else if (wave >= 15)
+            {
+                cashIncreaseEarning = 30;
+            }
+            else if (wave >= 5)
+            {
+                cashIncreaseEarning = 20;
+            }
+            else
+            {
+                cashIncreaseEarning = 10;
+            }
             gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
             gameManagerScript.health = 1;
         }
-        if (gameManagerScript.cash < 2)
+        if (gameManagerScript.cash < 2 && gameManagerScript.enemies.Count == 1)
         {
             Debug.Log("You lost");
         }
