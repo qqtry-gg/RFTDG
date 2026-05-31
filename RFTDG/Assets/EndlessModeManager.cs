@@ -22,7 +22,7 @@ public class EndlessModeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManagerScript.health <= 0)
+        if (gameManagerScript.health <= 0 && wave <= 200)
         {
             foreach (GameObject enemy in gameManagerScript.enemies)
             {
@@ -37,21 +37,32 @@ public class EndlessModeManager : MonoBehaviour
             gameManagerScript.cash = 0;
             wave++;
             waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
-            if (wave <= 10)
+            if (!(wave >= 196))
             {
-                RNDSpawning.SpawnBadTower();
-            }
-            else if (wave <= 40)
-            {
-                RNDSpawning.SpawnMediumTower();
-            }
-            else
-            {
-                RNDSpawning.SpawnGoodTower();
+                if (wave >= 20 && wave % 5 == 0)
+                {
+                    RNDSpawning.SpawnSpike();
+
+                }
+                else
+                {
+                    if (wave <= 10)
+                    {
+                        RNDSpawning.SpawnBadTower();
+                    }
+                    else if (wave <= 40)
+                    {
+                        RNDSpawning.SpawnMediumTower();
+                    }
+                    else
+                    {
+                        RNDSpawning.SpawnGoodTower();
+                    }
+                }
             }
 
 
-            if (wave >= 125)
+            if (wave >= 150)
             {
                 cashIncreaseEarning = 100;
             }
@@ -63,7 +74,7 @@ public class EndlessModeManager : MonoBehaviour
             {
                 cashIncreaseEarning = 50;
             }
-            else if (wave >= 15)
+            else if (wave >= 20)
             {
                 cashIncreaseEarning = 30;
             }
@@ -77,6 +88,14 @@ public class EndlessModeManager : MonoBehaviour
             }
             gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
             gameManagerScript.health = 1;
+            if (wave >= 196)
+            {
+                gameManagerScript.cash = 30 + (cashIncreaseEarning * wave) - wave * 20;
+            }
+        }
+        else
+        {
+            Debug.Log("You won the game!");
         }
         if (gameManagerScript.cash < 2 && gameManagerScript.enemies.Count == 1)
         {

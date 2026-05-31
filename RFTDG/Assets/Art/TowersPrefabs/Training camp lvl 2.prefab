@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691fe4be33686bc41b6918a4954fa9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Cooldown: 12.5
+  Cooldown: 20
   NextSpawnCooldown: 0.3
   AmountofUnits: 3
   unit: {fileID: 1147418819773181980, guid: 0524d375cebfca84aa924aa4f823a6ce, type: 3}
