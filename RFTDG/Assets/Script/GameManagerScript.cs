@@ -52,7 +52,7 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CashUI.GetComponent<TextMeshProUGUI>().text = "Cash: " + cash.ToString();
+        CashUI.GetComponent<TextMeshProUGUI>().text = cash.ToString();
         if (cooldown > 0)
         {
             cooldown -= Time.deltaTime;
@@ -62,7 +62,7 @@ public class GameManagerScript : MonoBehaviour
         {
             CooldownUI.GetComponent<TextMeshProUGUI>().color = Color.green;
         }
-        CooldownUI.GetComponent<TextMeshProUGUI>().text = "Cooldown: " + (Mathf.Round(cooldown * 100) / 100).ToString();
+        CooldownUI.GetComponent<TextMeshProUGUI>().text = (Mathf.Round(cooldown * 100) / 100).ToString();
     }
     public void DecreaseHealth(int amountofHealthToDecrese)
     {

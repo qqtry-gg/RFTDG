@@ -14,7 +14,7 @@ public class EndlessModeManager : MonoBehaviour
     {
         wave = 1;
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
-        gameManagerScript.cash = 30;
+        gameManagerScript.cash = 20;
         gameManagerScript.health = 1;
         RNDSpawning.SpawnBadTower();
     }
@@ -88,7 +88,7 @@ public class EndlessModeManager : MonoBehaviour
                 {
                     cashIncreaseEarning = 10;
                 }
-                gameManagerScript.cash = 30 + (cashIncreaseEarning * wave);
+                gameManagerScript.cash = 20 + (cashIncreaseEarning * wave) - 10;
                 gameManagerScript.health = 1;
                 if (wave >= 196)
                 {
