@@ -62,7 +62,8 @@ public class GameManagerScript : MonoBehaviour
         {
             CooldownUI.GetComponent<TextMeshProUGUI>().color = Color.green;
         }
-        CooldownUI.GetComponent<TextMeshProUGUI>().text = (Mathf.Round(cooldown * 100) / 100).ToString();
+        if (cooldown > 0) CooldownUI.GetComponent<TextMeshProUGUI>().text = (Mathf.Round(cooldown * 100) / 100).ToString();
+        else CooldownUI.GetComponent<TextMeshProUGUI>().text = "0";
     }
     public void DecreaseHealth(int amountofHealthToDecrese)
     {
