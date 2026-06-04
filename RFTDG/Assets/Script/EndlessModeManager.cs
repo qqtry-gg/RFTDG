@@ -33,6 +33,7 @@ public class EndlessModeManager : MonoBehaviour
                     else
                     {
                         Destroy(enemy.gameObject);
+                        gameManagerScript.cooldown = 0;
                     }
                     Debug.Log("You won this round");
                 }

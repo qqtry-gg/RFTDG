@@ -9,7 +9,7 @@ public class GameManagerScript : MonoBehaviour
     [Header("GameAttributes")]
     public int health;
     public int cash;
-    [SerializeField] float cooldown;
+    public float cooldown;
     [Header("Monster")]
     [SerializeField] Transform SpawnPlace;
     [SerializeField] GameObject Skeleton;
