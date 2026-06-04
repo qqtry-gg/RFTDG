@@ -163,7 +163,7 @@ public class GameManagerScript : MonoBehaviour
     }
     public void SpawnHealer()
     {
-        SpawnUnit(Healer, 2.25f, 100);
+        SpawnUnit(Healer, 2.25f, 200);
     }
     public void SpawnBandit()
     {

@@ -195,7 +195,7 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 0
-  hitpoints: 75
+  hitpoints: 85
   maxHealth: 0
 --- !u!95 &724672291155199720
 Animator:
@@ -232,12 +232,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   animator: {fileID: 724672291155199720}
-  HealingRadius: 4
+  HealingRadius: 4.5
   allyLayer:
     serializedVersion: 2
     m_Bits: 64
   HealingHP: 20
-  cooldown: 8
+  cooldown: 6
 --- !u!1 &4261485298647549714
 GameObject:
   m_ObjectHideFlags: 0
