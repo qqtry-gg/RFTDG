@@ -14,6 +14,8 @@ public class EndlessModeManager : MonoBehaviour
     {
         wave = 1;
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
+        waveTMP.SetActive(true);
+        waveTMP.GetComponent<Animator>().SetTrigger("WaveOver");
         gameManagerScript.cash = 30;
         gameManagerScript.health = 1;
         RNDSpawning.SpawnBadTower();
@@ -40,6 +42,8 @@ public class EndlessModeManager : MonoBehaviour
                 gameManagerScript.cash = 0;
                 wave++;
                 waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
+                waveTMP.SetActive(true);
+                waveTMP.GetComponent<Animator>().SetTrigger("WaveOver");
                 if (!(wave >= 196))
                 {
                     if (wave >= 20 && wave % 5 == 0)
@@ -105,5 +109,9 @@ public class EndlessModeManager : MonoBehaviour
         {
             Debug.Log("You lost");
         }
+    }
+    public void SetActiveFale()
+    {
+        gameObject.SetActive(false);
     }
 }
