@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneManagerScript : MonoBehaviour
 {
     public void ExitTheGame()
     {
+        
         Application.Quit();
     }
     public void CreditsScene()
