@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,18 @@ public class HealthScript : MonoBehaviour
     float dmg;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
+
+    public enum Type
+    {
+        Normal,
+        Fire,
+        Ice,
+        Grass,
+        Sand,
+        Rock,
+        Death
+    }
+    public Type enemyType;
     public void TakeDamage(float damage)
     {
         if (damage > 0)

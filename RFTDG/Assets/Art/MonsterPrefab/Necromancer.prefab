@@ -198,6 +198,7 @@ MonoBehaviour:
   isFlying: 0
   hitpoints: 100
   maxHealth: 0
+  enemyType: 6
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7
