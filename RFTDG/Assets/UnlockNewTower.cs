@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class UnlockNewTower : MonoBehaviour
 {
+    [SerializeField] GameObject towerUnlockedUI;
     [SerializeField] EndlessModeManager endlessModeManager;
     [SerializeField] GameObject[] enemyButtons;
     public bool isChecked = false;
@@ -15,19 +16,12 @@ public class UnlockNewTower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (endlessModeManager.wave == 5 && !isChecked)
+        if (endlessModeManager.wave % 5 == 0 && !isChecked)
         {
             CheckCurrentUnlockedTower();
+            towerUnlockedUI.SetActive(true);
+            towerUnlockedUI.GetComponent<Animator>().SetTrigger("WaveOver");
             isChecked = true;
-        }
-        else if (endlessModeManager.wave % 8 == 0 && !isChecked)
-        {
-            CheckCurrentUnlockedTower();
-            isChecked = true;
-        }
-        else
-        {
-            Debug.Log("Nic tym razem");
         }
     }
     void CheckCurrentUnlockedTower()
