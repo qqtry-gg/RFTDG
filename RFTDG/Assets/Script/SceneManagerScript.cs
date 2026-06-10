@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class SceneManagerScript : MonoBehaviour
 {
+    [SerializeField] GameObject gamePausedUI;
+
     public void ExitTheGame()
     {
         
@@ -28,6 +30,14 @@ public class SceneManagerScript : MonoBehaviour
     public void BackScene()
     {
         SceneManager.LoadScene(0);
+    }
+    public void OpenGamePausedUI()
+    {
+        gamePausedUI.SetActive(true);
+    }
+    public void CloseGamePausedUI()
+    {
+        gamePausedUI.SetActive(false);
     }
 
 }
