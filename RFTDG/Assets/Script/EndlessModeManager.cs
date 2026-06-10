@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EndlessModeManager : MonoBehaviour
 {
+    [SerializeField] UnlockNewTower unlockNewTower;
     [SerializeField] GameManagerScript gameManagerScript;
     [SerializeField] RNDSpawning RNDSpawning;
     [SerializeField] GameObject waveTMP;
-    int wave;
+    public int wave;
     [SerializeField] int cashIncreaseEarning = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,6 +41,7 @@ public class EndlessModeManager : MonoBehaviour
                 }
                 gameManagerScript.cash = 0;
                 wave++;
+                unlockNewTower.isChecked = false;
                 waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
                 PlayWaveAnimation();
                 if (!(wave >= 196))
