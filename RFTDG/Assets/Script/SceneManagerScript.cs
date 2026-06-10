@@ -35,13 +35,11 @@ public class SceneManagerScript : MonoBehaviour
     {
         gamePausedUI.SetActive(true);
         Time.timeScale = 0f;
-        Debug.Log("Pause");
     }
     public void CloseGamePausedUI()
     {
         gamePausedUI.SetActive(false);
         Time.timeScale = 1f;
-        Debug.Log("UnPause");
     }
 
 }

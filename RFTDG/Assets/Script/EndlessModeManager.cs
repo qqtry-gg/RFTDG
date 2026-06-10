@@ -69,29 +69,29 @@ public class EndlessModeManager : MonoBehaviour
 
                 if (wave >= 150)
                 {
-                    cashIncreaseEarning = 100;
+                    cashIncreaseEarning += 100;
                 }
                 else if (wave >= 100)
                 {
-                    cashIncreaseEarning = 70;
+                    cashIncreaseEarning += 70;
                 }
                 else if (wave >= 40)
                 {
-                    cashIncreaseEarning = 50;
+                    cashIncreaseEarning += 50;
                 }
-                else if (wave >= 20)
+                else if (wave >= 25)
                 {
-                    cashIncreaseEarning = 30;
+                    cashIncreaseEarning += 30;
                 }
-                else if (wave >= 5)
+                else if (wave >= 10)
                 {
-                    cashIncreaseEarning = 20;
+                    cashIncreaseEarning += 20;
                 }
                 else
                 {
-                    cashIncreaseEarning = 10;
+                    cashIncreaseEarning += 10;
                 }
-                gameManagerScript.cash = 30 + (cashIncreaseEarning * wave) - 10;
+                gameManagerScript.cash = 30 + cashIncreaseEarning;
                 gameManagerScript.health = 1;
                 if (wave >= 196)
                 {
