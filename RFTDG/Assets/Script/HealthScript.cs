@@ -13,6 +13,7 @@ public class HealthScript : MonoBehaviour
     public bool isFlying = false;
     public float hitpoints = 2f;
     public float maxHealth;
+    public bool isBossted;
     float dmg;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
