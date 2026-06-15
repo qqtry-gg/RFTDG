@@ -255,6 +255,7 @@ public class EndlessModeManager : MonoBehaviour
             void SuperEffective()
             {
                 currentEnemyHealthScript.hitpoints *= 1.4f;
+                currentEnemyHealthScript.maxHealth *= 1.4f;
                 currentEnemyMovementScript.movespeed *= 1.2f;
                 currentEnemyMovementScript.normalspeed *= 1.2f;
                 currentEnemyHealthScript.isBossted = true;
@@ -262,6 +263,7 @@ public class EndlessModeManager : MonoBehaviour
             void Effective()
             {
                 currentEnemyHealthScript.hitpoints *= 1.2f;
+                currentEnemyHealthScript.maxHealth *= 1.2f;
                 currentEnemyMovementScript.movespeed *= 1.1f;
                 currentEnemyMovementScript.normalspeed *= 1.1f;
                 currentEnemyHealthScript.isBossted = true;
@@ -269,6 +271,7 @@ public class EndlessModeManager : MonoBehaviour
             void NotEffective()
             {
                 currentEnemyHealthScript.hitpoints *= 0.8f;
+                currentEnemyHealthScript.maxHealth *= 0.8f;
                 currentEnemyMovementScript.movespeed *= 0.9f;
                 currentEnemyMovementScript.normalspeed *= 0.9f;
                 currentEnemyHealthScript.isBossted = true;
@@ -276,6 +279,7 @@ public class EndlessModeManager : MonoBehaviour
             void WorstEffective()
             {
                 currentEnemyHealthScript.hitpoints *= 0.6f;
+                currentEnemyHealthScript.maxHealth *= 0.6f;
                 currentEnemyMovementScript.movespeed *= 0.8f;
                 currentEnemyMovementScript.normalspeed *= 0.8f;
                 currentEnemyHealthScript.isBossted = true;
