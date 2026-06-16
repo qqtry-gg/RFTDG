@@ -36,6 +36,10 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject FlyingSkull;
     [SerializeField] GameObject Healer;
     [SerializeField] GameObject Bandit;
+    [SerializeField] GameObject FlyingDemon;
+    [SerializeField] GameObject Rat;
+    [SerializeField] GameObject Imp;
+    [SerializeField] GameObject MechaStoneGolem;
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
@@ -165,6 +169,23 @@ public class GameManagerScript : MonoBehaviour
     {
         SpawnUnit(Bandit, 0.5f, 35);
     }
+    public void SpawnFlyingDemon()
+    {
+        SpawnUnit(FlyingDemon, 0.55f, 40);
+    }
+    public void SpawnRat()
+    {
+        SpawnUnit(Rat, 0.05f, 1);
+    }
+    public void SpawnImp()
+    {
+        SpawnUnit(Imp, 2f, 325);
+    }
+    public void SpawnMechaStoneGolem()
+    {
+        SpawnUnit(MechaStoneGolem, 3f, 600);
+    }
+
     void SpawnUnit(GameObject enemy, float time, int cost)
     {
         StartCoroutine(Cooldown(enemy, time, cost));
