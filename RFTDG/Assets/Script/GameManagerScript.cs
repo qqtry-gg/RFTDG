@@ -68,10 +68,6 @@ public class GameManagerScript : MonoBehaviour
     public void DecreaseHealth(int amountofHealthToDecrese)
     {
         health -= amountofHealthToDecrese;
-        if (health <= 0)
-        {
-            Debug.Log("You lost");
-        }
     }
     public void SpawnSkeleton()
     {

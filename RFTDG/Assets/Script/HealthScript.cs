@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthScript : MonoBehaviour
 {
     [SerializeField] EnemyMovementScript enemyMovementScript;
+    [SerializeField] GameManagerScript gameManagerScript;
     [SerializeField] Image healtBar;
     [SerializeField] SpawnMobsAfterDeath spawnMob;
     [SerializeField] Phase2 secondphase;

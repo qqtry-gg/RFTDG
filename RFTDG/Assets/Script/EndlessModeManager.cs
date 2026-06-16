@@ -9,6 +9,8 @@ public class EndlessModeManager : MonoBehaviour
     [SerializeField] GameManagerScript gameManagerScript;
     [SerializeField] RNDSpawning RNDSpawning;
     [SerializeField] GameObject waveTMP;
+    [SerializeField] GameObject youWonUI;
+    [SerializeField] GameObject youLostUI;
     public int wave;
     [SerializeField] int cashIncreaseEarning = 0;
     public enum ElementMap
@@ -120,11 +122,12 @@ public class EndlessModeManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("You won the game!");
+            youWonUI.SetActive(true);
         }
-        if (gameManagerScript.cash < 2 && gameManagerScript.enemies.Count == 0)
+        gameManagerScript.enemies.RemoveAll(enemy => enemy == null);
+        if (gameManagerScript.cash <= 0 && gameManagerScript.enemies.Count == 0)
         {
-            Debug.Log("You lost");
+            youLostUI.SetActive(true);
         }
     }
     void PlayWaveAnimation()
