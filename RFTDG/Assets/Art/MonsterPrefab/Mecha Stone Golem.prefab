@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1799265903136321964}
   - component: {fileID: 4574904713601901565}
   - component: {fileID: 724672291155199720}
+  - component: {fileID: 964703836922434551}
   m_Layer: 6
   m_Name: Mecha Stone Golem
   m_TagString: MiniBoss
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_Sprite: {fileID: -5688739654425014672, guid: 6843d9203edfa534f9c7b15543c48a0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -221,6 +222,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &964703836922434551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2b467dad3bc34439ab5941080c821e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  animator: {fileID: 724672291155199720}
+  healthScript: {fileID: 4574904713601901565}
+  enemyMovementScript: {fileID: 1799265903136321964}
+  cooldownBeforBlock: 15
+  blockDuration: 5
 --- !u!1 &4261485298647549714
 GameObject:
   m_ObjectHideFlags: 0
