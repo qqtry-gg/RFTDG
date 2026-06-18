@@ -40,6 +40,7 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject Rat;
     [SerializeField] GameObject Imp;
     [SerializeField] GameObject MechaStoneGolem;
+    [SerializeField] GameObject SkeletonWithMace;
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
@@ -184,6 +185,10 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnMechaStoneGolem()
     {
         SpawnUnit(MechaStoneGolem, 3f, 600);
+    }
+    public void SpawnSkeletonWithMace()
+    {
+        SpawnUnit(SkeletonWithMace, 0.45f, 60);
     }
 
     void SpawnUnit(GameObject enemy, float time, int cost)
