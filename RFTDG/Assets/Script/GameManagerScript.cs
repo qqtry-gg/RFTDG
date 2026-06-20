@@ -42,6 +42,7 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject MechaStoneGolem;
     [SerializeField] GameObject SkeletonWithMace;
     [SerializeField] GameObject FinalBoss;
+    [SerializeField] GameObject IceWolf;
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
@@ -194,6 +195,10 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnFinalBoss()
     {
         SpawnUnit(FinalBoss, 60f, 17500);
+    }
+    public void SpawnIceWolf()
+    {
+        SpawnUnit(IceWolf, 0.35f, 12);
     }
 
     void SpawnUnit(GameObject enemy, float time, int cost)
