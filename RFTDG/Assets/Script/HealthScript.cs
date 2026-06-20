@@ -25,7 +25,6 @@ public class HealthScript : MonoBehaviour
         Fire,
         Ice,
         Grass,
-        Sand,
         Rock,
         Death
     }

@@ -199,7 +199,7 @@ MonoBehaviour:
   hitpoints: 650
   maxHealth: 0
   isBossted: 0
-  enemyType: 5
+  enemyType: 4
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7

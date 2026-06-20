@@ -158,10 +158,6 @@ public class EndlessModeManager : MonoBehaviour
                 {
                     SuperEffective();
                 }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Sand)
-                {
-                    Effective();
-                }
                 else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Ice)
                 {
                     NotEffective();
@@ -185,10 +181,6 @@ public class EndlessModeManager : MonoBehaviour
                 {
                     SuperEffective();
                 }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Sand)
-                {
-                    Effective();
-                }
                 else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Grass)
                 {
                     WorstEffective();
@@ -208,47 +200,17 @@ public class EndlessModeManager : MonoBehaviour
                 {
                     Effective();
                 }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Sand)
-                {
-                    NotEffective();
-                }
                 else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Fire)
                 {
                     WorstEffective();
                 }
             }
-            if (currentElementMap == ElementMap.Sand)
-            {
-                if (currentEnemyHealthScript.enemyType == HealthScript.Type.Sand)
-                {
-                    SuperEffective();
-                }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Fire)
-                {
-                    Effective();
-                }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Rock)
-                {
-                    Effective();
-                }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Grass)
-                {
-                    Effective();
-                }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Ice)
-                {
-                    WorstEffective();
-                }
-            }
+          
             if (currentElementMap == ElementMap.Rock)
             {
                 if (currentEnemyHealthScript.enemyType == HealthScript.Type.Rock)
                 {
                     SuperEffective();
-                }
-                else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Sand)
-                {
-                    Effective();
                 }
                 else if (currentEnemyHealthScript.enemyType == HealthScript.Type.Grass)
                 {
