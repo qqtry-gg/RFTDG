@@ -20,7 +20,7 @@ public class BoostRaidousScript : MonoBehaviour
     {
         if (collision.GetComponent<HealthScript>() != null)
         {
-            if (collision.GetComponent<HealthScript>().enemyType == healthScript.enemyType && collision.gameObject != gameObject && collision.GetComponent<HealthScript>().isBosstedByBoss == false && bossDied == false)
+            if (collision.GetComponent<HealthScript>().enemyType == healthScript.enemyType && collision.gameObject != gameObject && collision.GetComponent<HealthScript>().isBosstedByBoss == false)
             {
                 HealthScript enemyHealthScript = collision.GetComponent<HealthScript>();
                 EnemyMovementScript enemyMovementScript = collision.GetComponent<EnemyMovementScript>();
