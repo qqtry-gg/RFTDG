@@ -15,9 +15,11 @@ public class HealthScript : MonoBehaviour
     public float hitpoints = 2f;
     public float maxHealth;
     public bool isBossted;
+    public bool isBosstedByBoss;
     float dmg;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
+
 
     public enum Type
     {
@@ -54,7 +56,6 @@ public class HealthScript : MonoBehaviour
                 spawnMob.SpawnMobs();
                 enemyDied = true;
             }
-
             enemyDied = true;
             StartCoroutine(DestoryAfterAnimation());
         }
