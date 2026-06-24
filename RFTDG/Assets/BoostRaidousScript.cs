@@ -4,8 +4,12 @@ using System.Collections.Generic;
 
 public class BoostRaidousScript : MonoBehaviour
 {
-    [SerializeField] HealthScript healthScript;
+    HealthScript healthScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        healthScript = GetComponentInParent<HealthScript>();
+    }
     void Start()
     {
         

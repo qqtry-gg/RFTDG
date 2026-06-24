@@ -20,7 +20,7 @@ public class HealthScript : MonoBehaviour
     bool is_PoisonWorking = false;
     bool enemyDied = false;
 
-
+    
     public enum Type
     {
         Normal,
@@ -72,6 +72,7 @@ public class HealthScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManagerScript = FindAnyObjectByType<GameManagerScript>();
         maxHealth = hitpoints;
     }
 
@@ -100,6 +101,10 @@ public class HealthScript : MonoBehaviour
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         enemyMovementScript.movespeed = 0f;
         yield return new WaitForSeconds(stateInfo.length);
+        if (gameObject.CompareTag("Boss"))
+        {
+            gameManagerScript.DeleteBoss();
+        }
         Destroy(gameObject);
     }
 

@@ -10,6 +10,7 @@ public class GameManagerScript : MonoBehaviour
     public int health;
     public int cash;
     public float cooldown;
+    int AmountOfBosses;
     [Header("Monster")]
     [SerializeField] Transform SpawnPlace;
     [SerializeField] GameObject Skeleton;
@@ -49,6 +50,7 @@ public class GameManagerScript : MonoBehaviour
     
 
     bool canSpawn = true;
+    [HideInInspector]
     public List<GameObject> enemies = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -219,5 +221,17 @@ public class GameManagerScript : MonoBehaviour
             yield return new WaitForSeconds(time);
             canSpawn = true;
         }
+    }
+    public void AddBoss()
+    {
+        AmountOfBosses++;
+    }
+    public void DeleteBoss()
+    {
+        AmountOfBosses--;
+    }
+    public void SetBossTo0()
+    {
+        AmountOfBosses = 0;
     }
 }

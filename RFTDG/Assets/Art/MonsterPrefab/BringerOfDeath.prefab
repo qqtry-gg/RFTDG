@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4574904713601901565}
   - component: {fileID: 724672291155199720}
   - component: {fileID: 5536107882390688486}
+  - component: {fileID: 7943098495387353741}
   m_Layer: 6
   m_Name: BringerOfDeath
   m_TagString: Boss
@@ -244,6 +245,19 @@ MonoBehaviour:
   animator: {fileID: 724672291155199720}
   EnemyMovementScript: {fileID: 1799265903136321964}
   AnimationCooldown: 0.7
+--- !u!114 &7943098495387353741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486336b9cf377824e94cc1dab92dcbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  managerScript: {fileID: 0}
 --- !u!1 &4261485298647549714
 GameObject:
   m_ObjectHideFlags: 0

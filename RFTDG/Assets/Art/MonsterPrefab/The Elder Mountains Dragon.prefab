@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3837083187109395954}
   - component: {fileID: -4661714012992904886}
   - component: {fileID: 329527762075084996}
+  - component: {fileID: 3289010967237419721}
   m_Layer: 6
   m_Name: The Elder Mountains Dragon
   m_TagString: Boss
@@ -39,6 +40,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5221775816281783123}
+  - {fileID: 2450664124295730102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &628870265068025926
@@ -165,6 +167,7 @@ MonoBehaviour:
   hitpoints: 6000
   maxHealth: 0
   isBossted: 0
+  isBosstedByBoss: 0
   enemyType: 4
 --- !u!95 &2474288931461103657
 Animator:
@@ -282,6 +285,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.0080285, y: 2.290364}
   m_EdgeRadius: 0
+--- !u!114 &3289010967237419721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486336b9cf377824e94cc1dab92dcbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  managerScript: {fileID: 0}
 --- !u!1 &1189100434505758718
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,3 +551,65 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1001 &8787759207852349508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2413472232383684010}
+    m_Modifications:
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.39700064
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641320149698003193, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+      propertyPath: m_Name
+      value: BoostRadious
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+--- !u!4 &2450664124295730102 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6626737312640650226, guid: a7c9d662744159a43abe14db05e111c1, type: 3}
+  m_PrefabInstance: {fileID: 8787759207852349508}
+  m_PrefabAsset: {fileID: 0}
