@@ -50,6 +50,7 @@ public class GameManagerScript : MonoBehaviour
     
 
     bool canSpawn = true;
+    public GameObject[] bossButtons;
     [HideInInspector]
     public List<GameObject> enemies = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -61,6 +62,20 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (AmountOfBosses <= 0)
+        {
+            foreach(GameObject bossButtons in bossButtons)
+            {
+                bossButtons.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (GameObject bossButtons in bossButtons)
+            {
+                bossButtons.SetActive(false);
+            }
+        }
         CashUI.GetComponent<TextMeshProUGUI>().text = cash.ToString();
         if (cooldown > 0)
         {

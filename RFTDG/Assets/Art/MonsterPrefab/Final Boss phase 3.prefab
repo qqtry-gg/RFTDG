@@ -236,7 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486336b9cf377824e94cc1dab92dcbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossSpawned
-  managerScript: {fileID: 0}
 --- !u!1 &4261485298647549714
 GameObject:
   m_ObjectHideFlags: 0

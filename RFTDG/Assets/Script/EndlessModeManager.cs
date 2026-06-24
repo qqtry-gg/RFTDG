@@ -42,6 +42,7 @@ public class EndlessModeManager : MonoBehaviour
         {
             if (gameManagerScript.health <= 0)
             {
+                gameManagerScript.SetBossTo0();
                 foreach (GameObject enemy in gameManagerScript.enemies)
                 {
                     if (enemy == null)

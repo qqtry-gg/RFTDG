@@ -103,7 +103,7 @@ public class HealthScript : MonoBehaviour
         yield return new WaitForSeconds(stateInfo.length);
         if (gameObject.CompareTag("Boss"))
         {
-            gameManagerScript.DeleteBoss();
+            gameManagerScript.SetBossTo0();
         }
         Destroy(gameObject);
     }
