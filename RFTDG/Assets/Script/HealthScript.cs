@@ -19,8 +19,9 @@ public class HealthScript : MonoBehaviour
     float dmg;
     bool is_PoisonWorking = false;
     bool enemyDied = false;
+    public static Action<String> OnEnemyDeath;
 
-    
+
     public enum Type
     {
         Normal,
@@ -101,6 +102,7 @@ public class HealthScript : MonoBehaviour
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         enemyMovementScript.movespeed = 0f;
         yield return new WaitForSeconds(stateInfo.length);
+        OnEnemyDeath?.Invoke(gameObject.tag);
         if (gameObject.CompareTag("Boss"))
         {
             gameManagerScript.SetBossTo0();

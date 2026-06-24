@@ -8,6 +8,8 @@ TagManager:
   - Boss
   - Obelisc
   - FreezeTower
+  - StartingPoint
+  - NoReSekelting
   layers:
   - Default
   - TransparentFX
