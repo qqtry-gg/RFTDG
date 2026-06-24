@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 724672291155199720}
   - component: {fileID: 1737434546698033519}
   m_Layer: 6
-  m_Name: Skeleton
+  m_Name: Death Spirit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 335594504579162428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.5, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -19.5, y: -0.1, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8636446911129471028}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 5818877937026341535, guid: 8eb889d314e34064cba9086a97f233cb, type: 3}
+  m_Sprite: {fileID: -6973191664251310759, guid: d9838d5b7ade02141b625da6e68f221f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,8 +158,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.05, y: 0}
-  m_Radius: 0.2
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1
 --- !u!114 &1799265903136321964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 2.5
+  movespeed: 3.6
   rb: {fileID: 4039901463788289763}
   game: {fileID: 0}
   pathIndex: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 0
-  hitpoints: 3
+  hitpoints: 150
   maxHealth: 0
   isBossted: 0
   isBosstedByBoss: 0
@@ -211,7 +211,7 @@ Animator:
   m_GameObject: {fileID: 335594504579162428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73e9b8cd046651b489f14073546503bd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 89dd59a1f898c754f86f28388f5c6642, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -347,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.06373753, y: 0.33334732}
+  m_AnchoredPosition: {x: -0.00000013411045, y: 0.17500001}
   m_SizeDelta: {x: 1000, y: 542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &9184679659515570957
