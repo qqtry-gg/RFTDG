@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1799265903136321964}
   - component: {fileID: 4574904713601901565}
   - component: {fileID: 724672291155199720}
-  - component: {fileID: 1737434546698033519}
   m_Layer: 6
   m_Name: Ice Golem
   m_TagString: MiniBoss
@@ -223,18 +222,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1737434546698033519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335594504579162428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 486336b9cf377824e94cc1dab92dcbf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossSpawned
 --- !u!1 &4261485298647549714
 GameObject:
   m_ObjectHideFlags: 0

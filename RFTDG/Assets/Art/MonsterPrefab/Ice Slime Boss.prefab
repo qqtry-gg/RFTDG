@@ -15,9 +15,11 @@ GameObject:
   - component: {fileID: 1799265903136321964}
   - component: {fileID: 4574904713601901565}
   - component: {fileID: 724672291155199720}
+  - component: {fileID: -1170613731845795733}
+  - component: {fileID: -4694042273822277620}
   m_Layer: 6
-  m_Name: Spawned Skeleton
-  m_TagString: NoReSekelting
+  m_Name: Ice Slime Boss
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.5, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8636446911129471028}
@@ -85,7 +87,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 5818877937026341535, guid: 8eb889d314e34064cba9086a97f233cb, type: 3}
+  m_Sprite: {fileID: 6514144336136709068, guid: a381f5b6885061a4796e495cf27e037e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,8 +159,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.05, y: 0}
-  m_Radius: 0.2
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.14
 --- !u!114 &1799265903136321964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 2.5
+  movespeed: 0.9
   rb: {fileID: 4039901463788289763}
   game: {fileID: 0}
   pathIndex: 0
@@ -192,14 +194,14 @@ MonoBehaviour:
   enemyMovementScript: {fileID: 1799265903136321964}
   gameManagerScript: {fileID: 0}
   healtBar: {fileID: 6294703542443137791}
-  spawnMob: {fileID: 0}
+  spawnMob: {fileID: -4694042273822277620}
   secondphase: {fileID: 0}
   isFlying: 0
-  hitpoints: 3
+  hitpoints: 60
   maxHealth: 0
   isBossted: 0
   isBosstedByBoss: 0
-  enemyType: 5
+  enemyType: 2
 --- !u!95 &724672291155199720
 Animator:
   serializedVersion: 7
@@ -210,7 +212,7 @@ Animator:
   m_GameObject: {fileID: 335594504579162428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73e9b8cd046651b489f14073546503bd, type: 2}
+  m_Controller: {fileID: 9100000, guid: f8ba6bc3d77862a498aadbf6c4fd2cb5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -222,6 +224,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1170613731845795733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9d2409b6ca04b4aa9e3949f4c69d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassiveRegeneration
+  hp: {fileID: 4574904713601901565}
+--- !u!114 &-4694042273822277620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335594504579162428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b7b7db7c714d646a569ca84d5b7a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnMobsAfterDeath
+  HealthScript: {fileID: 4574904713601901565}
+  amountofMobs: 3
+  MobToSpawn: {fileID: 335594504579162428, guid: c7b142e6e67f72441b34f56a1d4338d4, type: 3}
+  Separation: {x: 0.75, y: 0.1, z: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &4261485298647549714
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.06373753, y: 0.33334732}
+  m_AnchoredPosition: {x: 0.000000067055225, y: 0.17142859}
   m_SizeDelta: {x: 1000, y: 542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &9184679659515570957

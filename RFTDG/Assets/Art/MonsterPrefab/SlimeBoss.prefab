@@ -191,12 +191,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
+  gameManagerScript: {fileID: 0}
   healtBar: {fileID: 2935723846316087641}
   spawnMob: {fileID: 8953951124269549937}
   secondphase: {fileID: 0}
   isFlying: 0
   hitpoints: 75
   maxHealth: 0
+  isBossted: 0
+  isBosstedByBoss: 0
   enemyType: 3
 --- !u!95 &6669343959562102164
 Animator:
@@ -235,7 +238,7 @@ MonoBehaviour:
   HealthScript: {fileID: 4574904713601901565}
   amountofMobs: 4
   MobToSpawn: {fileID: 335594504579162428, guid: a13861792c1a2074e99f3e3a47cce7df, type: 3}
-  Separation: {x: 0.5, y: 0, z: 0}
+  Separation: {x: 0.5, y: 0.1, z: 0}
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &620220513806449344
 GameObject:
