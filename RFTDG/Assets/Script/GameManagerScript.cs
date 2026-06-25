@@ -49,6 +49,7 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject IceSlime;
     [SerializeField] GameObject IceSlimeBoss;
     [SerializeField] GameObject FlyingIceGolem;
+    [SerializeField] GameObject GrassGolemBoss;
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
@@ -241,6 +242,10 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnFlyingIceGolem()
     {
         SpawnUnit(FlyingIceGolem, 2f, 500);
+    }
+    public void SpawnGrassGolemBoss()
+    {
+        SpawnUnit(GrassGolemBoss, 25f, 6000);
     }
 
     void SpawnUnit(GameObject enemy, float time, int cost)
