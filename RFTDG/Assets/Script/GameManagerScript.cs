@@ -45,6 +45,7 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject FinalBoss;
     [SerializeField] GameObject IceWolf;
     [SerializeField] GameObject Reaper;
+    [SerializeField] GameObject IceGolem;
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
@@ -221,6 +222,10 @@ public class GameManagerScript : MonoBehaviour
     public void SpawnReaper()
     {
         SpawnUnit(Reaper, 35f, 12500);
+    }
+    public void SpawnIceGolem()
+    {
+        SpawnUnit(IceGolem, 0.8f, 100);
     }
 
     void SpawnUnit(GameObject enemy, float time, int cost)
