@@ -16,7 +16,7 @@ public class UnlockNewTower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (endlessModeManager.wave % 5 == 0 && !isChecked)
+        if (endlessModeManager.wave % 4 == 0 && !isChecked)
         {
             CheckCurrentUnlockedTower();
             towerUnlockedUI.SetActive(true);

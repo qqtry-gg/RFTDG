@@ -11,6 +11,7 @@ public class EndlessModeManager : MonoBehaviour
     [SerializeField] GameObject waveTMP;
     [SerializeField] GameObject youWonUI;
     [SerializeField] GameObject youLostUI;
+    [SerializeField] GameObject mapElementUI;
     public int wave;
     [SerializeField] int cashIncreaseEarning = 0;
     public enum ElementMap
@@ -29,6 +30,7 @@ public class EndlessModeManager : MonoBehaviour
     {
         wave = 1;
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
+        mapElementUI.GetComponent<TextMeshProUGUI>().text = "Current element: " + currentElementMap.ToString();
         PlayWaveAnimation();
         gameManagerScript.cash = 30;
         gameManagerScript.health = 1;
@@ -118,6 +120,7 @@ public class EndlessModeManager : MonoBehaviour
                     ElementMap[] allElements = (ElementMap[])System.Enum.GetValues(typeof(ElementMap));
 
                     currentElementMap = allElements[Random.Range(0, allElements.Length)];
+                    mapElementUI.GetComponent<TextMeshProUGUI>().text = "Current element: " + currentElementMap.ToString();
                 }
             }
         }
