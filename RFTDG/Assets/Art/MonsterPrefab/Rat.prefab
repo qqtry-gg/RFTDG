@@ -157,8 +157,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02, y: -0.1}
-  m_Radius: 0.06
+  m_Offset: {x: 0.02, y: -0.12}
+  m_Radius: 0.05
 --- !u!114 &1799265903136321964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 4.75
+  movespeed: 10
   rb: {fileID: 4039901463788289763}
   game: {fileID: 0}
   pathIndex: 0
@@ -198,6 +198,7 @@ MonoBehaviour:
   hitpoints: 1
   maxHealth: 0
   isBossted: 0
+  isBosstedByBoss: 0
   enemyType: 0
 --- !u!95 &724672291155199720
 Animator:

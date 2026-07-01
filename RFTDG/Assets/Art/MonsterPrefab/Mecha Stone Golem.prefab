@@ -83,8 +83,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 962851689
+  m_SortingLayer: 1
   m_SortingOrder: 20
   m_Sprite: {fileID: -5688739654425014672, guid: 6843d9203edfa534f9c7b15543c48a0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -199,6 +199,7 @@ MonoBehaviour:
   hitpoints: 650
   maxHealth: 0
   isBossted: 0
+  isBosstedByBoss: 0
   enemyType: 4
 --- !u!95 &724672291155199720
 Animator:

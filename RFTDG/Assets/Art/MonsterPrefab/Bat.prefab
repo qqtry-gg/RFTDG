@@ -82,8 +82,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 962851689
+  m_SortingLayer: 1
   m_SortingOrder: 20
   m_Sprite: {fileID: -5167055545809326721, guid: c8c47f33b2852e74696a02bcc97dee5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,12 +190,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
+  gameManagerScript: {fileID: 0}
   healtBar: {fileID: 637112542559408545}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 1
   hitpoints: 2
   maxHealth: 0
+  isBossted: 0
+  isBosstedByBoss: 0
+  enemyType: 0
 --- !u!95 &2474288931461103657
 Animator:
   serializedVersion: 7

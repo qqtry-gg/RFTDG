@@ -14,25 +14,33 @@ public class EndlessModeManager : MonoBehaviour
     [SerializeField] GameObject mapElementUI;
     public int wave;
     [SerializeField] int cashIncreaseEarning = 0;
+    [SerializeField] GameObject grassMap;
+    [SerializeField] GameObject FireMap;
+    [SerializeField] GameObject IceMap;
+    [SerializeField] GameObject RockMap;
+    [SerializeField] GameObject DeathMap;
+    GameObject previousMap;
     public enum ElementMap
     {
-        Normal,
         Fire,
         Ice,
         Grass,
-        Sand,
         Rock,
         Death
     }
-    public ElementMap currentElementMap = ElementMap.Normal;
+    public ElementMap currentElementMap = ElementMap.Grass;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        grassMap.SetActive(true);
+        previousMap = grassMap;
         wave = 1;
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
         mapElementUI.GetComponent<TextMeshProUGUI>().text = "Current element: " + currentElementMap.ToString();
         PlayWaveAnimation();
-        gameManagerScript.cash = 30;
+        gameManagerScript.cash = 10;
         gameManagerScript.health = 1;
         RNDSpawning.SpawnBadTower();
     }
@@ -91,25 +99,25 @@ public class EndlessModeManager : MonoBehaviour
                 }
                 else if (wave >= 100)
                 {
-                    cashIncreaseEarning += 70;
+                    cashIncreaseEarning += 75;
                 }
                 else if (wave >= 40)
                 {
-                    cashIncreaseEarning += 50;
+                    cashIncreaseEarning += 55;
                 }
                 else if (wave >= 25)
                 {
-                    cashIncreaseEarning += 30;
+                    cashIncreaseEarning += 40;
                 }
                 else if (wave >= 10)
                 {
-                    cashIncreaseEarning += 20;
+                    cashIncreaseEarning += 15;
                 }
                 else
                 {
-                    cashIncreaseEarning += 10;
+                    cashIncreaseEarning += 5;
                 }
-                gameManagerScript.cash = 30 + cashIncreaseEarning;
+                gameManagerScript.cash = 10 + cashIncreaseEarning;
                 gameManagerScript.health = 1;
                 if (wave >= 196)
                 {
@@ -121,6 +129,36 @@ public class EndlessModeManager : MonoBehaviour
 
                     currentElementMap = allElements[Random.Range(0, allElements.Length)];
                     mapElementUI.GetComponent<TextMeshProUGUI>().text = "Current element: " + currentElementMap.ToString();
+                    if (currentElementMap == ElementMap.Grass)
+                    {
+                        previousMap.SetActive(false);
+                        previousMap = grassMap;
+                        grassMap.SetActive(true);
+                    }
+                    else if (currentElementMap == ElementMap.Fire)
+                    {
+                        previousMap.SetActive(false);
+                        previousMap = FireMap;
+                        FireMap.SetActive(true);
+                    }
+                    else if (currentElementMap == ElementMap.Ice)
+                    {
+                        previousMap.SetActive(false);
+                        previousMap = IceMap;
+                        IceMap.SetActive(true);
+                    }
+                    else if (currentElementMap == ElementMap.Rock)
+                    {
+                        previousMap.SetActive(false);
+                        previousMap = RockMap;
+                        RockMap.SetActive(true);
+                    }
+                    else if (currentElementMap == ElementMap.Death)
+                    {
+                        previousMap.SetActive(false);
+                        previousMap = DeathMap;
+                        DeathMap.SetActive(true);
+                    }
                 }
             }
         }
