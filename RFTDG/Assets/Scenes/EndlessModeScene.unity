@@ -13569,7 +13569,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 7.6
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -15318,7 +15318,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -32964,7 +32964,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -51410,7 +51410,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -74636,7 +74636,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -88992,7 +88992,7 @@ MonoBehaviour:
   cash: 0
   cooldown: 0
   SpawnPlace: {fileID: 2138483264}
-  Skeleton: {fileID: 335594504579162428, guid: 92c0f8a6a0c0147469cfab4bb7f9245d, type: 3}
+  Skeleton: {fileID: 335594504579162428, guid: 00a3921cef310e942a815e5bd031c259, type: 3}
   Bat: {fileID: 335594504579162428, guid: 8e549056ef918804d9f4c59b211dab9e, type: 3}
   Slime: {fileID: 335594504579162428, guid: a13861792c1a2074e99f3e3a47cce7df, type: 3}
   Goblin: {fileID: 335594504579162428, guid: 0209bbb003f75b14fb36cc0a88fe15c3, type: 3}
@@ -90107,7 +90107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.74609375, y: 2.1193848}
+  m_AnchoredPosition: {x: -0.74609375, y: 2.1194153}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1785939867
@@ -107423,7 +107423,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
