@@ -40,7 +40,7 @@ public class EndlessModeManager : MonoBehaviour
         waveTMP.GetComponent<TMPro.TextMeshProUGUI>().text = "Wave: " + wave;
         mapElementUI.GetComponent<TextMeshProUGUI>().text = "Current element: " + currentElementMap.ToString();
         PlayWaveAnimation();
-        gameManagerScript.cash = 10;
+        gameManagerScript.cash = 20;
         gameManagerScript.health = 1;
         RNDSpawning.SpawnBadTower();
     }
@@ -48,6 +48,13 @@ public class EndlessModeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (wave < 116)
+        {
+            foreach (GameObject bossButtons in gameManagerScript.bossButtons)
+            {
+                bossButtons.SetActive(false);
+            }
+        }
         if (wave <= 200)
         {
             if (gameManagerScript.health <= 0)
@@ -117,7 +124,7 @@ public class EndlessModeManager : MonoBehaviour
                 {
                     cashIncreaseEarning += 5;
                 }
-                gameManagerScript.cash = 10 + cashIncreaseEarning;
+                gameManagerScript.cash = 20 + cashIncreaseEarning;
                 gameManagerScript.health = 1;
                 if (wave >= 196)
                 {
