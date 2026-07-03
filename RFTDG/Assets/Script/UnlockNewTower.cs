@@ -23,6 +23,13 @@ public class UnlockNewTower : MonoBehaviour
             towerUnlockedUI.GetComponent<Animator>().SetTrigger("WaveOver");
             isChecked = true;
         }
+        if (endlessModeManager.wave % 10 == 0 && !isChecked && endlessModeManager.wave % 4 != 0)
+        {
+            CheckCurrentUnlockedTower();
+            towerUnlockedUI.SetActive(true);
+            towerUnlockedUI.GetComponent<Animator>().SetTrigger("WaveOver");
+            isChecked = true;
+        }
     }
     void CheckCurrentUnlockedTower()
     {

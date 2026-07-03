@@ -48,7 +48,7 @@ public class EndlessModeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (wave < 116)
+        if (wave < 96)
         {
             foreach (GameObject bossButtons in gameManagerScript.bossButtons)
             {
@@ -84,11 +84,11 @@ public class EndlessModeManager : MonoBehaviour
                     }
                     else
                     {
-                        if (wave <= 10)
+                        if (wave <= 30)
                         {
                             RNDSpawning.SpawnBadTower();
                         }
-                        else if (wave <= 40)
+                        else if (wave <= 110)
                         {
                             RNDSpawning.SpawnMediumTower();
                         }
