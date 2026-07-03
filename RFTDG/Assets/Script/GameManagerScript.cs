@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using NUnit.Framework;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -53,7 +54,8 @@ public class GameManagerScript : MonoBehaviour
     [Header("UI")]
     [SerializeField] GameObject CashUI;
     [SerializeField] GameObject CooldownUI;
-    
+    [SerializeField] TMP_Text GameSpeedText;
+
 
     bool canSpawn = true;
     public GameObject[] bossButtons;
@@ -278,5 +280,18 @@ public class GameManagerScript : MonoBehaviour
     public void SetBossTo0()
     {
         AmountOfBosses = 0;
+    }
+    public void gameSpeedButtonPressed()
+    {
+        if (Time.timeScale != 2f)
+        {
+            Time.timeScale = 2f;
+            GameSpeedText.text = "2x";
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            GameSpeedText.text = "1x";
+        }
     }
 }
