@@ -197,7 +197,7 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 0
-  hitpoints: 4000
+  hitpoints: 3000
   maxHealth: 0
   isBossted: 0
   isBosstedByBoss: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730e0dec18527394db3154332b51e4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  timeBeforeRespawning: 30
+  timeBeforeRespawning: 40
   unitToSpawn: {fileID: 335594504579162428, guid: a5e778cd413ef8c4499ff0957c86d6c1, type: 3}
 --- !u!1 &4261485298647549714
 GameObject:

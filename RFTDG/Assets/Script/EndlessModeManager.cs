@@ -102,15 +102,15 @@ public class EndlessModeManager : MonoBehaviour
 
                 if (wave >= 150)
                 {
-                    cashIncreaseEarning += 100;
+                    cashIncreaseEarning += 200;
                 }
                 else if (wave >= 100)
                 {
-                    cashIncreaseEarning += 75;
+                    cashIncreaseEarning += 100;
                 }
                 else if (wave >= 40)
                 {
-                    cashIncreaseEarning += 55;
+                    cashIncreaseEarning += 60;
                 }
                 else if (wave >= 25)
                 {
@@ -124,12 +124,13 @@ public class EndlessModeManager : MonoBehaviour
                 {
                     cashIncreaseEarning += 5;
                 }
-                gameManagerScript.cash = 20 + cashIncreaseEarning;
-                gameManagerScript.health = 1;
                 if (wave >= 196)
                 {
-                    gameManagerScript.cash = 30 + (cashIncreaseEarning * wave) - wave * 20;
+                    cashIncreaseEarning -= 1000;
                 }
+                gameManagerScript.cash = 20 + cashIncreaseEarning;
+                gameManagerScript.health = 1;
+
                 if (wave % 10 == 0)
                 {
                     ElementMap[] allElements = (ElementMap[])System.Enum.GetValues(typeof(ElementMap));
