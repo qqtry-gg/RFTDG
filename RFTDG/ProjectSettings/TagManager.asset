@@ -10,6 +10,9 @@ TagManager:
   - FreezeTower
   - StartingPoint
   - NoReSekelting
+  - Audio
+  - PoisonTower
+  - GroundBreakerTower
   layers:
   - Default
   - TransparentFX

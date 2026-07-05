@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("AudioClip")]
     public AudioClip gameBackground;
+    public AudioClip menuBackground;
     public AudioClip buttonPressed;
     public AudioClip lose;
     public AudioClip waveCompleted;
@@ -25,7 +27,14 @@ public class AudioManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        musicSource.clip = gameBackground;
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            musicSource.clip = gameBackground;
+        }
+        else
+        {
+            musicSource.clip = menuBackground;
+        }
         musicSource.Play();
         musicSource.loop = true;
     }
