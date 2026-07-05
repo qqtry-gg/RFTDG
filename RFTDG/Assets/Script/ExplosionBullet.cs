@@ -8,7 +8,13 @@ public class ExplosionBullet : MonoBehaviour
     Collider2D[] circleColliders;
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] GameObject explosionPrefab;
+
+    AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
     void Start()
     {
         
@@ -28,6 +34,7 @@ public class ExplosionBullet : MonoBehaviour
             if (healthScript != null)
             {
                 healthScript.TakeDamage(explosionDMG);
+                audioManager.PlaySFX(audioManager.Explosion);
             }
         }
 

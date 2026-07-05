@@ -9,7 +9,13 @@ public class PoisonScript : MonoBehaviour
     [SerializeField] float PoisonCooldownBeforeDMG = 1f;
     [SerializeField] float PoisonDMG = 1f;
     bool is_PoisonWorking = false;
+
+    AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
     void Start()
     {
         
@@ -26,6 +32,7 @@ public class PoisonScript : MonoBehaviour
         if (EnemyHealth != null )
         {
             EnemyHealth.StartPosionEffect(PoisonHitCounter,PoisonCooldownBeforeDMG,PoisonDMG);
+            audioManager.PlaySFX(audioManager.poisonTowerAttack);
         }
     }
 }

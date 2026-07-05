@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GroundBreakerAttack : MonoBehaviour
 {
+    AudioManager audioManager;
     Collider2D[] enemyColliders;
     float timer = 0f;
     [Header("Attributes")]
@@ -11,6 +12,10 @@ public class GroundBreakerAttack : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -23,6 +28,7 @@ public class GroundBreakerAttack : MonoBehaviour
         if (timer >= attackSpeed)
         {
             GroundBreakerAttackMethod();
+            
             timer = 0f;
         }
 
@@ -31,6 +37,7 @@ public class GroundBreakerAttack : MonoBehaviour
     {
         enemyColliders = Physics2D.OverlapCircleAll(transform.position, radius, enemyLayerMask);
         animator.SetTrigger("Attack");
+        audioManager.PlaySFX(audioManager.groundbreakerTowerAttack);
         foreach (Collider2D enemy in enemyColliders)
         {
             enemy.GetComponent<HealthScript>().TakeDamage(damage);

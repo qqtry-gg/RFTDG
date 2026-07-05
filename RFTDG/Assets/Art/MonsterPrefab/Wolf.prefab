@@ -195,9 +195,10 @@ MonoBehaviour:
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 0
-  hitpoints: 5
+  hitpoints: 6
   maxHealth: 0
   isBossted: 0
+  isBosstedByBoss: 0
   enemyType: 3
 --- !u!95 &-3509567341143660152
 Animator:

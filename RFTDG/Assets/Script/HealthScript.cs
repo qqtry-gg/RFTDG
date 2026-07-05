@@ -10,6 +10,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField] Image healtBar;
     [SerializeField] SpawnMobsAfterDeath spawnMob;
     [SerializeField] Phase2 secondphase;
+    AudioManager audioManager;
     [Header("Attributes")]
     public bool isFlying = false;
     public float hitpoints = 2f;
@@ -20,6 +21,7 @@ public class HealthScript : MonoBehaviour
     bool is_PoisonWorking = false;
     bool enemyDied = false;
     public static Action<String> OnEnemyDeath;
+    
 
 
     public enum Type
@@ -107,6 +109,7 @@ public class HealthScript : MonoBehaviour
         {
             gameManagerScript.SetBossTo0();
         }
+        audioManager.PlaySFX(audioManager.enemyDeath);
         Destroy(gameObject);
     }
 
@@ -114,6 +117,7 @@ public class HealthScript : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
     public void Regenerate()
     {

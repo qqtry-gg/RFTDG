@@ -20,6 +20,11 @@ public class EndlessModeManager : MonoBehaviour
     [SerializeField] GameObject RockMap;
     [SerializeField] GameObject DeathMap;
     GameObject previousMap;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
     public enum ElementMap
     {
         Fire,
@@ -70,6 +75,7 @@ public class EndlessModeManager : MonoBehaviour
                         gameManagerScript.cooldown = 0;
                     }
                 }
+                audioManager.PlaySFX(audioManager.waveCompleted);
                 gameManagerScript.cash = 0;
                 wave++;
                 unlockNewTower.isChecked = false;
@@ -178,6 +184,7 @@ public class EndlessModeManager : MonoBehaviour
         if (gameManagerScript.cash <= 0 && gameManagerScript.enemies.Count == 0)
         {
             youLostUI.SetActive(true);
+            audioManager.PlaySFXOnce(audioManager.lose);
         }
     }
     void PlayWaveAnimation()

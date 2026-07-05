@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963eb3c8c24dd8743b1ae9ed932753ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovementScript
-  movespeed: 2.25
+  movespeed: 2.5
   rb: {fileID: 4039901463788289763}
   game: {fileID: 0}
   pathIndex: 0
@@ -190,12 +190,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
+  gameManagerScript: {fileID: 0}
   healtBar: {fileID: 2935723846316087641}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 0
   hitpoints: 9
   maxHealth: 0
+  isBossted: 0
+  isBosstedByBoss: 0
   enemyType: 3
 --- !u!95 &6669343959562102164
 Animator:

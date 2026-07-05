@@ -7,6 +7,11 @@ public class FreezingScript : MonoBehaviour
     [SerializeField] EnemyMovementScript enemyMovementScript;
     [SerializeField] float FreezeTime;
     bool isUsed = false;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = FindFirstObjectByType<AudioManager>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((enemyLayer & (1 << collision.gameObject.layer)) != 0 && !isUsed && !(collision.gameObject.CompareTag("Boss")) && !(collision.gameObject.CompareTag("MiniBoss")))
@@ -14,6 +19,7 @@ public class FreezingScript : MonoBehaviour
             enemyMovementScript = collision.gameObject.GetComponent<EnemyMovementScript>();
             enemyMovementScript.StartFreze(FreezeTime);
             isUsed = true;
+            audioManager.PlaySFX(audioManager.freezeTowerAttack);
         }
     }
 }

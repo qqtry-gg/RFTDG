@@ -15,6 +15,7 @@ public class BaseTurretScript : MonoBehaviour
     [SerializeField] Transform ObjectToRotate;
     [SerializeField] GameObject BulletPrefab;
     [SerializeField] Transform FiringPoint;
+    AudioManager audioManager;
 
     [Header("Atributes")]
     public float targetingRange = 5f;
@@ -55,6 +56,7 @@ public class BaseTurretScript : MonoBehaviour
     private void Shoot()
     {
             animator.SetTrigger("Attack");
+        audioManager.PlaySFX(audioManager.archerTowerAttack);
             Invoke("Shoot2", timeBeforeAnimation);
 
     }
@@ -156,6 +158,7 @@ public class BaseTurretScript : MonoBehaviour
     Animator animator;
     private void Awake()
     {
-         animator = GetComponentInChildren<Animator>();   
+        animator = GetComponentInChildren<Animator>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 }
