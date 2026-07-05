@@ -11,10 +11,12 @@ public class Summon : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] EnemyMovementScript EnemyMovementScript;
     [SerializeField] float AnimationCooldown = 1.65f;
+    GameManagerScript gameManagerScript;
     GameObject EnemySpawned;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        gameManagerScript = FindFirstObjectByType<GameManagerScript>();
         StartCoroutine(Spawning());
     }
     public void SpawnMobs()
@@ -23,6 +25,7 @@ public class Summon : MonoBehaviour
         {
             offset = Separation * i;
             EnemySpawned = Instantiate(MobToSpawn, transform.position + offset, Quaternion.identity);
+            gameManagerScript.enemies.Add(EnemySpawned);
             EnemySpawned.GetComponent<EnemyMovementScript>().pathIndex = gameObject.GetComponent<EnemyMovementScript>().pathIndex;
         }
     }

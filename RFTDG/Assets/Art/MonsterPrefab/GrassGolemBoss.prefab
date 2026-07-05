@@ -198,7 +198,7 @@ MonoBehaviour:
   spawnMob: {fileID: 8073645472177188794}
   secondphase: {fileID: 0}
   isFlying: 0
-  hitpoints: 20000
+  hitpoints: 15000
   maxHealth: 0
   isBossted: 0
   isBosstedByBoss: 0
