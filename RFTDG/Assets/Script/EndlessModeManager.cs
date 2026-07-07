@@ -53,12 +53,29 @@ public class EndlessModeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (wave < 112)
+        {
+            gameManagerScript.bossButtons[5].gameObject.SetActive(false);
+        }
+        if (wave < 110)
+        {
+            gameManagerScript.bossButtons[4].gameObject.SetActive(false);
+        }
+        if (wave < 108)
+        {
+            gameManagerScript.bossButtons[3].gameObject.SetActive(false);
+        }
+        if (wave < 104)
+        {
+            gameManagerScript.bossButtons[2].gameObject.SetActive(false);
+        }
+        if (wave < 100)
+        {
+            gameManagerScript.bossButtons[1].gameObject.SetActive(false);
+        }
         if (wave < 96)
         {
-            foreach (GameObject bossButtons in gameManagerScript.bossButtons)
-            {
-                bossButtons.SetActive(false);
-            }
+            gameManagerScript.bossButtons[0].gameObject.SetActive(false);
         }
         if (wave <= 200)
         {
