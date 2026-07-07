@@ -69566,6 +69566,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348947088b7df654bb73e8c7ade37c7e, type: 3}
+--- !u!1001 &1443239379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.514559
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4464917
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096632229623606874, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693902912695432378, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
+      propertyPath: m_Name
+      value: ArcherTowerlvl3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53f9a03a01fb1dc42ad0db75a02f2179, type: 3}
 --- !u!1001 &1445307369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89027,7 +89084,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -120779,3 +120836,4 @@ SceneRoots:
   - {fileID: 117450739}
   - {fileID: 2070107573}
   - {fileID: 8916484437538949926}
+  - {fileID: 1443239379}

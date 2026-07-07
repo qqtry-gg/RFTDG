@@ -71,22 +71,22 @@ public class EnemyMovementScript : MonoBehaviour
         float movementX = currentPositon.x - previousPosition.x;
         if (!isSpriteRotated)
         {
-            if (movementX > 0.01f) //idzie w prawo
+            if (movementX > 0) //idzie w prawo
             {
                 spriteRenderer.flipX = false;
             }
-            else if (movementX < -0.01f) //idzie w lewo
+            else if (movementX < 0) //idzie w lewo
             {
                 spriteRenderer.flipX = true;
             }
         }
         else
         {
-            if (movementX > 0.01f) //idzie w prawo
+            if (movementX > 0) //idzie w prawo
             {
                 spriteRenderer.flipX = true;
             }
-            else if (movementX < -0.01f) //idzie w lewo
+            else if (movementX < -0) //idzie w lewo
             {
                 spriteRenderer.flipX = false;
             }
