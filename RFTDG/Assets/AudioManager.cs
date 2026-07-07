@@ -21,22 +21,27 @@ public class AudioManager : MonoBehaviour
     public AudioClip freezeTowerAttack;
     public AudioClip Explosion;
 
-
+    public static AudioManager instance;
 
     bool soundplayed = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 4)
+        if (instance == null)
         {
-            musicSource.clip = gameBackground;
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            musicSource.clip = menuBackground;
+            Destroy(gameObject);
         }
-        musicSource.Play();
-        musicSource.loop = true;
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        ChangeMusic(SceneManager.GetActiveScene().buildIndex);
+
+
     }
 
     public void PlaySFX(AudioClip clip)
@@ -50,5 +55,38 @@ public class AudioManager : MonoBehaviour
             SFXSource.PlayOneShot(clip);
             soundplayed = true;
         }
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ChangeMusic(scene.buildIndex);
+    }
+    private void ChangeMusic(int buildIndex)
+    {
+        AudioClip newClip;
+
+        if (buildIndex == 4)
+        {
+            newClip = gameBackground;
+        }
+        else
+        {
+            newClip = menuBackground;
+        }
+        if (musicSource.clip == newClip)
+        {
+            return;
+        }
+        musicSource.clip = newClip;
+        musicSource.Play();
     }
 }
