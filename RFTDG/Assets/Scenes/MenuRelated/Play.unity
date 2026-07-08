@@ -523,7 +523,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1688743193}
         m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
-        m_MethodName: EndlessPlay
+        m_MethodName: CampainPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
