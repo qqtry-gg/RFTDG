@@ -9,14 +9,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5104062048077411109, guid: 1f96ab96538fb764eac6850630f7a801, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104062048077411109, guid: 1f96ab96538fb764eac6850630f7a801, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104062048077411109, guid: 1f96ab96538fb764eac6850630f7a801, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.40000004
       objectReference: {fileID: 0}
@@ -58,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5673033923014225751, guid: 1f96ab96538fb764eac6850630f7a801, type: 3}
       propertyPath: m_Name
-      value: LevelConstruction
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
