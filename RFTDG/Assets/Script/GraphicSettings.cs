@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GraphicSettings : MonoBehaviour
 {
+    [SerializeField] TMPro.TMP_Dropdown DropdownGraphicSetting;
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
@@ -15,7 +16,9 @@ public class GraphicSettings : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("qualityLevel"))
         {
-            QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("qualityLevel"));
+            int qualityLevel = PlayerPrefs.GetInt("qualityLevel");
+            QualitySettings.SetQualityLevel(qualityLevel);
+            DropdownGraphicSetting.value = qualityLevel;
         }
     }
 }
