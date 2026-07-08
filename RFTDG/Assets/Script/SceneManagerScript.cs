@@ -6,6 +6,7 @@ public class SceneManagerScript : MonoBehaviour
 {
     [SerializeField] GameObject gamePausedUI;
 
+    float timeSpeed;
     public void ExitTheGame()
     {
         
@@ -34,12 +35,13 @@ public class SceneManagerScript : MonoBehaviour
     public void OpenGamePausedUI()
     {
         gamePausedUI.SetActive(true);
+        timeSpeed = Time.timeScale;
         Time.timeScale = 0f;
     }
     public void CloseGamePausedUI()
     {
         gamePausedUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = timeSpeed;
     }
 
 }
