@@ -191,13 +191,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyMovementScript: {fileID: 1799265903136321964}
+  gameManagerScript: {fileID: 0}
   healtBar: {fileID: 5114616020829063395}
   spawnMob: {fileID: 0}
   secondphase: {fileID: 0}
   isFlying: 0
   hitpoints: 20
   maxHealth: 0
-  enemyType: 0
+  isBossted: 0
+  isBosstedByBoss: 0
+  enemyType: 3
 --- !u!95 &-3687797841040834651
 Animator:
   serializedVersion: 7
