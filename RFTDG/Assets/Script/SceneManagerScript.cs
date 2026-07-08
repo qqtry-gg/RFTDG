@@ -27,6 +27,10 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+    public void CampainPlay()
+    {
+        SceneManager.LoadScene(5);
+    }
     public void BackScene()
     {
         SceneManager.LoadScene(0);
