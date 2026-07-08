@@ -87,6 +87,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
         musicSource.clip = newClip;
+        musicSource.loop = true;
         musicSource.Play();
     }
 }
