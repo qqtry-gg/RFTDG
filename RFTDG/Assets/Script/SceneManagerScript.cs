@@ -9,7 +9,6 @@ public class SceneManagerScript : MonoBehaviour
     float timeSpeed;
     public void ExitTheGame()
     {
-        
         Application.Quit();
     }
     public void CreditsScene()
