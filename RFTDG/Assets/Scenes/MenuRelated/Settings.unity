@@ -3347,6 +3347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28e76f06a5cacd45aac723862ed7243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  DropdownGraphicSetting: {fileID: 1285603012}
 --- !u!114 &1465493524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3359,6 +3360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a830b651da8b54b478c4fe09b95787a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  ToggleFullScreen: {fileID: 737519505}
 --- !u!114 &1465493525
 MonoBehaviour:
   m_ObjectHideFlags: 0

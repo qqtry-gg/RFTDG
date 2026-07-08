@@ -1,13 +1,12 @@
-using System;
-using NUnit.Framework;
+
 using UnityEngine;
-using UnityEngine.UI;
+
 using System.Collections.Generic;
 using TMPro;
 
 public class ResolutionSettings : MonoBehaviour
 {
-
+    
     [SerializeField] TMP_Dropdown resolutionDropDown;
     Resolution[] resolutions; 
     private void Start()
@@ -32,10 +31,18 @@ public class ResolutionSettings : MonoBehaviour
         resolutionDropDown.AddOptions(options);
         resolutionDropDown.value = currentResolutionIndex;
         resolutionDropDown.RefreshShownValue();
+        if (PlayerPrefs.HasKey("resolutionIndex"))
+        {
+            int ResolutionIndex = PlayerPrefs.GetInt("resolutionIndex");
+            Screen.SetResolution(resolutions[ResolutionIndex].width, resolutions[ResolutionIndex].height, Screen.fullScreen);
+            resolutionDropDown.value = ResolutionIndex;
+        }
     }
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
+        PlayerPrefs.SetInt("resolutionIndex", resolutionIndex);
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+    
 }
