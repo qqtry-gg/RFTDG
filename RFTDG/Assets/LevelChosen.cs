@@ -15,6 +15,7 @@ public class LevelChosen : MonoBehaviour
     [SerializeField] levelType currentLevelType;
 
 
+
     enum levelDifficultyenum
     {
         Skirmish,
@@ -40,6 +41,8 @@ public class LevelChosen : MonoBehaviour
     TextMeshProUGUI levelTypeText;
     bool isSelected = false;
     static LevelChosen selectedLevel;
+    ButtonClick buttonClickSound;
+    Animator animator;
 
 
 
@@ -74,6 +77,9 @@ public class LevelChosen : MonoBehaviour
     }
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        buttonClickSound = FindFirstObjectByType<ButtonClick>();
+
         LevelMenu = GameObject.FindGameObjectWithTag("LevelMenu");
         mapPreviewUI = GameObject.FindGameObjectWithTag("mapPreview");
         levelNameUI = GameObject.FindGameObjectWithTag("levelName");
@@ -93,6 +99,7 @@ public class LevelChosen : MonoBehaviour
         {
             selectedLevel.StopGlow();
         }
+        buttonClickSound.ButtonsPressed();
 
         selectedLevel = this;
 
@@ -179,5 +186,9 @@ public class LevelChosen : MonoBehaviour
     void StopGlow()
     {
         ResetDifficultyGlow();
+    }
+    private void OnMouseEnter()
+    {
+        animator.SetTrigger("HoverOver");
     }
 }
