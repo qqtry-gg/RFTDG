@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 556838282223310155, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1 Variant 6
       objectReference: {fileID: 0}
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.976
       objectReference: {fileID: 0}
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.705
       objectReference: {fileID: 0}
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51,6 +51,14 @@ PrefabInstance:
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: currentLevelType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: currentLevelDifficulty
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

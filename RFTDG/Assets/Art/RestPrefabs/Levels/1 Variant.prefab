@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21228
+      value: -3.21228
       objectReference: {fileID: 0}
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50,6 +50,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1141001009883400505, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: mapType
+      value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: levelName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: difficulty
+      value: Skirmish
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: mapPreview
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: description
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: numberOfWaves
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: rewardsAmount
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170595507678775408, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
+      propertyPath: currentLevelDifficulty
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4862938168244973988, guid: db3b888e48c30b74dbc1f5e6eb2cc5da, type: 3}
