@@ -21,6 +21,7 @@ TagManager:
   - waves
   - gemsAmount
   - Description
+  - ButtonClick
   layers:
   - Default
   - TransparentFX

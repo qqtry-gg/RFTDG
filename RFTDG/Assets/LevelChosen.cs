@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -43,9 +44,10 @@ public class LevelChosen : MonoBehaviour
     static LevelChosen selectedLevel;
     ButtonClick buttonClickSound;
     Animator animator;
+    Animator anim;
 
 
-
+    DisableObejct levelMenuContainer;
     GameObject LevelMenu;
     GameObject mapPreviewUI;
     GameObject levelNameUI;
@@ -75,12 +77,16 @@ public class LevelChosen : MonoBehaviour
             mat.SetFloat(ShaderUtilities.ID_UnderlaySoftness, 0.5f);
         }
     }
+    
     private void Awake()
     {
         animator = GetComponent<Animator>();
         buttonClickSound = FindFirstObjectByType<ButtonClick>();
 
+        levelMenuContainer = FindFirstObjectByType<DisableObejct>();
+
         LevelMenu = GameObject.FindGameObjectWithTag("LevelMenu");
+        anim = LevelMenu.GetComponentInChildren<Animator>();
         mapPreviewUI = GameObject.FindGameObjectWithTag("mapPreview");
         levelNameUI = GameObject.FindGameObjectWithTag("levelName");
         levelDifficultyUI = GameObject.FindGameObjectWithTag("LevelDifficulty");
@@ -103,7 +109,12 @@ public class LevelChosen : MonoBehaviour
 
         selectedLevel = this;
 
+        anim.Rebind();
+        anim.Update(0f);
         LevelMenu.SetActive(true);
+        levelMenuContainer.gameObject.SetActive(true);
+        anim.SetTrigger("OpenMenu");
+        
         SetLevelData();
     }
     void SetLevelData()
