@@ -4,6 +4,10 @@ using UnityEngine;
 public class LevelLoaderScript : MonoBehaviour
 {
     [SerializeField] Animator Transition;
+    private void Start()
+    {
+        SceneChanged();
+    }
     public void SceneChanged()
     {
         StartCoroutine(LoadLevel());

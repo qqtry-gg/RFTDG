@@ -21194,9 +21194,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1945843050}
-        m_TargetAssemblyTypeName: SetActiveFalse, Assembly-CSharp
-        m_MethodName: SetAnimatioTrigger
+      - m_Target: {fileID: 1650532102}
+        m_TargetAssemblyTypeName: MenuAnimationScript, Assembly-CSharp
+        m_MethodName: CloseMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29793,7 +29793,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650532101}
-  - component: {fileID: 1650532103}
   - component: {fileID: 1650532102}
   m_Layer: 5
   m_Name: LevelMenuContainer
@@ -29811,7 +29810,7 @@ RectTransform:
   m_GameObject: {fileID: 1650532100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1164802599}
@@ -29844,32 +29843,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1650532100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d4a73826919e7c479e144d7c6ac862c, type: 3}
+  m_Script: {fileID: 11500000, guid: bc60c0fbaddb10d438c3c151831175bf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DisableObejct
-  RealMenu: {fileID: 1945843045}
---- !u!95 &1650532103
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650532100}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 486a4f889c756ce479c248aea303411a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorClassIdentifier: '::'
+  levelMenu: {fileID: 1945843045}
 --- !u!1 &1655807837
 GameObject:
   m_ObjectHideFlags: 0
@@ -30445,7 +30422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -30510,7 +30487,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4d6c8b88fe0ab7409a84111ac256910, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::SetActiveFalse
 --- !u!4 &2086735504 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1204646667676764781, guid: b077d001fae9e674c8bde1155313f442, type: 3}
@@ -30945,6 +30922,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b12c13f4a3854c4c8da5db1e39e6e86, type: 3}
+--- !u!1001 &1399162185717661289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 559.6336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 279.52704
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732092695872138047, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261761728577160717, guid: 0c7544720b942ea468677630328c4fad, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c7544720b942ea468677630328c4fad, type: 3}
 --- !u!1001 &1501959158484115666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32382,6 +32416,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1399162185717661289}
   - {fileID: 1926314974}
   - {fileID: 1260692755}
   - {fileID: 2113834877}
