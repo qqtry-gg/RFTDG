@@ -47,7 +47,7 @@ public class LevelChosen : MonoBehaviour
     Animator anim;
 
 
-    DisableObejct levelMenuContainer;
+    GameObject levelMenuContainer;
     GameObject LevelMenu;
     GameObject mapPreviewUI;
     GameObject levelNameUI;
@@ -83,7 +83,6 @@ public class LevelChosen : MonoBehaviour
         animator = GetComponent<Animator>();
         buttonClickSound = FindFirstObjectByType<ButtonClick>();
 
-        levelMenuContainer = FindFirstObjectByType<DisableObejct>();
 
         LevelMenu = GameObject.FindGameObjectWithTag("LevelMenu");
         anim = LevelMenu.GetComponentInChildren<Animator>();
@@ -106,14 +105,10 @@ public class LevelChosen : MonoBehaviour
             selectedLevel.StopGlow();
         }
         buttonClickSound.ButtonsPressed();
+        LevelMenu.GetComponentInChildren<MenuAnimationScript>().OpenMenu();
 
         selectedLevel = this;
 
-        anim.Rebind();
-        anim.Update(0f);
-        LevelMenu.SetActive(true);
-        levelMenuContainer.gameObject.SetActive(true);
-        anim.SetTrigger("OpenMenu");
         
         SetLevelData();
     }
