@@ -11,6 +11,7 @@ public class LevelChosen : MonoBehaviour
     [SerializeField] string numberOfWaves;
     [SerializeField] string rewardsAmount;
     [SerializeField] string description;
+    [SerializeField] int level;
     [SerializeField] Sprite mapPreview;
     [SerializeField] levelDifficultyenum currentLevelDifficulty;
     [SerializeField] levelType currentLevelType;
@@ -46,7 +47,7 @@ public class LevelChosen : MonoBehaviour
     Animator animator;
     Animator anim;
 
-
+    LevelManagerScript levelManagerScript;
     GameObject levelMenuContainer;
     GameObject LevelMenu;
     GameObject mapPreviewUI;
@@ -83,7 +84,7 @@ public class LevelChosen : MonoBehaviour
         animator = GetComponent<Animator>();
         buttonClickSound = FindFirstObjectByType<ButtonClick>();
 
-
+        levelManagerScript = FindFirstObjectByType<LevelManagerScript>();
         LevelMenu = GameObject.FindGameObjectWithTag("LevelMenu");
         mapPreviewUI = GameObject.FindGameObjectWithTag("mapPreview");
         levelNameUI = GameObject.FindGameObjectWithTag("levelName");
@@ -105,10 +106,10 @@ public class LevelChosen : MonoBehaviour
         }
         buttonClickSound.ButtonsPressed();
         LevelMenu.GetComponentInChildren<MenuAnimationScript>().OpenMenu();
-
+        levelManagerScript.SetSelectedLevel(level);
         selectedLevel = this;
 
-        
+
         SetLevelData();
     }
     void SetLevelData()
