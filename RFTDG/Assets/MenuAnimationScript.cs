@@ -8,7 +8,7 @@ public class MenuAnimationScript : MonoBehaviour
     public void OpenMenu()
     {
         levelMenu.SetActive(true);
-        LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.5f);
+        LeanTween.scale(gameObject, new Vector3(1, 1, 1), 1f).setEase(LeanTweenType.easeOutBounce);
     }
     public void CloseMenu()
     {
