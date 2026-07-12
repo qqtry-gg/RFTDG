@@ -85,7 +85,6 @@ public class LevelChosen : MonoBehaviour
 
 
         LevelMenu = GameObject.FindGameObjectWithTag("LevelMenu");
-        anim = LevelMenu.GetComponentInChildren<Animator>();
         mapPreviewUI = GameObject.FindGameObjectWithTag("mapPreview");
         levelNameUI = GameObject.FindGameObjectWithTag("levelName");
         levelDifficultyUI = GameObject.FindGameObjectWithTag("LevelDifficulty");
